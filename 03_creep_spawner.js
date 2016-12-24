@@ -75,7 +75,7 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-
+        min_number_long_distance_harvesters = 0;
         //min_number_harvesters = min_number_harvesters * 4; // DELETE THIS WHEN NOT IN SIMULATION
 
         // energizers is set to 0 since Harvesters become energizers if spawn is full
