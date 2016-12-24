@@ -8,7 +8,7 @@ module.exports = {
         creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
 
         var home_room = creep.memory.home_room;
-        creep.memory.target_room = 'W21S49';
+        creep.memory.target_room = 'W21S79';
         var creep_current_room = creep.room.name;
         var in_target_room = creep_current_room == creep.memory.target_room;
         var in_home_room = creep_current_room == home_room;
@@ -25,7 +25,7 @@ module.exports = {
         else if (in_home_room && creep.memory.working == true) {
             require("role_harvester").run(creep);
             }
-        else if (in_home_room && creep.memory.working == false) {
+        if (in_home_room && creep.memory.working == false) {
             require('function_go_to_room').run(creep, creep.memory.target_room);
             }
         }
