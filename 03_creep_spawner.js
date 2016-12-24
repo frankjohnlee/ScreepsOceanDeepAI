@@ -33,7 +33,7 @@ module.exports = {
         else if (current_spawn_level == 3) {
             var min_number_repairers = 1;
             var min_number_harvesters = 3;
-            var min_number_long_distance_harvesters = 0;
+            var min_number_long_distance_harvesters = 2;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 0;

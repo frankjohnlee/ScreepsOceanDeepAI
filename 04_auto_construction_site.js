@@ -21,12 +21,12 @@ module.exports = {
 
         if (curr_room.controller.level > 1) {
             require('auto_build').run(curr_room, 26, 23, STRUCTURE_EXTENSION);
-            require('auto_build').run(curr_room, 16, 29, STRUCTURE_CONTAINER);
+
 
         }
         if (curr_room.controller.level > 2) {
-            require('auto_build_towers').run(curr_room);
-            require('auto_build').run(curr_room, 27, 28, STRUCTURE_CONTAINER);
+            require('auto_build').run(curr_room, 9, 22, STRUCTURE_TOWERS);
+            require('auto_build').run(curr_room, 27, 28, STRUCTURE_STORAGE);
         }
         if (debug_module){
             var debug_string = "Module: auto_build.js | ";

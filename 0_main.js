@@ -38,6 +38,6 @@ module.exports = {
         Monday December 19, 2016
         - Currently have an issue with my warrior1, seems like the problem is in function_go_to_room.js
         - Also issue with construction site. Posted on Reddit to ask about it https://www.reddit.com/r/screeps/comments/5j91t2/trouble_filtering_construction_sites/
-        */
+        */ ////
     }
 };

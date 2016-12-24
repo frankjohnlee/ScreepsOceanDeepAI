@@ -22,8 +22,8 @@ module.exports = {
             if (creep != undefined){
                 var creep_role = creep.memory.role;
                 var con_site_length = creep.room.find(FIND_CONSTRUCTION_SITES).length;
-                var con_side_less_than_10 = con_site_length < 50;
-                if (con_side_less_than_10 && creep.memory.role != 'role_builder'){
+                var con_side_less_than_10 = con_site_length < 99;
+                if (con_side_less_than_10 && creep.memory.role != 'Builder' &&  creep.memory.role != 'Waller'){
                     build_roads = spaces + spaces + "Creating Roads b/c con_site_length < 10: true";
                     creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
                 }

@@ -8,9 +8,9 @@ module.exports = {
         creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
 
         var home_room = creep.memory.home_room;
-        var target_room = 'W77N72';
+        creep.memory.target_room = 'W21S49';
         var creep_current_room = creep.room.name;
-        var in_target_room = creep_current_room == target_room;
+        var in_target_room = creep_current_room == creep.memory.target_room;
         var in_home_room = creep_current_room == home_room;
 
 

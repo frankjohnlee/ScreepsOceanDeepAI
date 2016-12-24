@@ -1,7 +1,8 @@
 module.exports = {
     run: function (creep) {
         var debug_module = false;
-        creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);;
+        creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
+        creep.memory.target_room = 'W21S49';
 
         if (creep.room.name == creep.memory.target_room){
             creep.moveTo(creep.room.controller);
