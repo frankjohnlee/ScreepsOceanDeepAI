@@ -9,7 +9,7 @@
 
 module.exports = {
         run: function(energy) {
-            var numberofParts = Math.floor(energy-600);
+            var numberofParts = Math.floor((energy-600)/50);
             var body = [CLAIM];
             for (let i = 0; i < numberofParts; i++){
                 body.push(MOVE);

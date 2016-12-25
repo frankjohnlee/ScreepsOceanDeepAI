@@ -116,7 +116,7 @@ module.exports = {
         //var min_number_upgraders = 2;
         //var min_number_builders = 3;
         //var min_number_warriors = 0;
-        //var min_number_expanders = 0;
+        //var min_number_expanders = 1;
         //var min_number_long_distance_upgraders = 0;
         //var min_number_wallers = 2;
         //var min_number_warriors1 = 0;
@@ -364,13 +364,13 @@ module.exports = {
                 });
             }
             else if (current_number_of_expanders < min_number_expanders) {
-                //var body_parts_list_expander = require('createFastestExpander').run(energy); // [CLAIM, MOVE, MOVE, MOVE, MOVE]
+                var body_parts_list_expander = require('createFastestExpander').run(energy); // [CLAIM, MOVE, MOVE, MOVE, MOVE]
 
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more expander. Will create with energy: Undefined" + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + [CLAIM, MOVE]);
 
 
-                curr_spawn.createCreep([CLAIM, MOVE], undefined, {
+                curr_spawn.createCreep(body_parts_list_expander, undefined, {
                     role: 'Expander',
                     working: false,
                     target_room: 'W78N73',
