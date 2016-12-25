@@ -79,7 +79,7 @@ module.exports = {
                     object.structureType == STRUCTURE_RAMPART)
                 });
             }
-            structure.sort((a, b) => a.hits - b.hits);
+            //structure.sort((a, b) => a.hits - b.hits);
             //console.log(structure);
 
 
