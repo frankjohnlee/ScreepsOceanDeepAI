@@ -275,7 +275,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'LongDistanceHarvester',
                     working: false,
-                    target_room: 'W32S77',
+                    target_room: 'W21S79',
                     home_room: curr_spawn.room.name
                 });
             }
