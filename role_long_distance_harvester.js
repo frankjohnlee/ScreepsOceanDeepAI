@@ -27,16 +27,16 @@ module.exports = {
         else if (in_target_room && creep.memory.working == true) {
             var con_site_rest = creep.room.find(FIND_CONSTRUCTION_SITES);
             var repairSite = creep.room.find(FIND_STRUCTURES, {
-                filter: object => object.hits < 1500 &&
+                filter: object => object.hits < 1000 &&
                 (object.structureType != STRUCTURE_WALL && object.structureType != STRUCTURE_RAMPART)
             });
             // IF THERE ARE CONSTRUCTION SITES THEN BUILD IT
             if (con_site_rest) {
-                require('role_builder').run(creep);
+                require('role_repairer').run(creep);
             }
             // IF THERE ARE ANY ROADS ABOUT TO BREAK DOWN REPAIR IT
             else if (repairSite) {
-                require('role_repairer').run(creep);
+                require('role_builder').run(creep);
             }
             // IF NONE OF THOSE ARE PRESSING ISSUES THEN GO HOME AND DELIVER ENERGY
             else {

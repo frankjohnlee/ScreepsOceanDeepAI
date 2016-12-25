@@ -34,13 +34,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="role_long_distance_harvester.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="role_long_distance_harvester.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.63414633" vertical-offset="176" max-vertical-offset="1408">
+              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
               <folding>
-                <element signature="e#1208#2043#0" expanded="false" />
                 <element signature="e#2175#2236#0" expanded="false" />
               </folding>
             </state>
@@ -91,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32170978" vertical-offset="264" max-vertical-offset="8602">
+            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="8602">
               <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding />
             </state>
@@ -154,10 +153,10 @@
         <option value="$PROJECT_DIR$/function_fortify_walls.js" />
         <option value="$PROJECT_DIR$/04_auto_construction_site.js" />
         <option value="$PROJECT_DIR$/print_module_creep.js" />
-        <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
         <option value="$PROJECT_DIR$/createBalancedCreep.js" />
         <option value="$PROJECT_DIR$/0_main.js" />
         <option value="$PROJECT_DIR$/03_creep_spawner.js" />
+        <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
       </list>
     </option>
   </component>
@@ -491,17 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding>
-            <element signature="e#1208#2043#0" expanded="false" />
-            <element signature="e#2175#2236#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/createBalancedCreep.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
@@ -530,9 +518,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32170978" vertical-offset="264" max-vertical-offset="8602">
+        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="8602">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63414633" vertical-offset="176" max-vertical-offset="1408">
+          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+          <folding>
+            <element signature="e#2175#2236#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
