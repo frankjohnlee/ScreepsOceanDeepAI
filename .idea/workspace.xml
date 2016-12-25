@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createBalancedCreep.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="createBalancedCreep.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/createBalancedCreep.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
-              <caret line="38" column="118" selection-start-line="38" selection-start-column="118" selection-end-line="38" selection-end-column="118" />
+            <state vertical-scroll-proportion="0.87626547" vertical-offset="277" max-vertical-offset="1276">
+              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.696288" vertical-offset="1977" max-vertical-offset="8602">
-              <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2508" max-vertical-offset="8602">
+              <caret line="112" column="48" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -151,12 +151,12 @@
         <option value="$PROJECT_DIR$/function_fortify_walls.js" />
         <option value="$PROJECT_DIR$/04_auto_construction_site.js" />
         <option value="$PROJECT_DIR$/print_module_creep.js" />
-        <option value="$PROJECT_DIR$/createBalancedCreep.js" />
         <option value="$PROJECT_DIR$/0_main.js" />
         <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
         <option value="$PROJECT_DIR$/role_expander.js" />
         <option value="$PROJECT_DIR$/createFastestExpander.js" />
         <option value="$PROJECT_DIR$/03_creep_spawner.js" />
+        <option value="$PROJECT_DIR$/createBalancedCreep.js" />
       </list>
     </option>
   </component>
@@ -540,16 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createBalancedCreep.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
-          <caret line="38" column="118" selection-start-line="38" selection-start-column="118" selection-end-line="38" selection-end-column="118" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/createFastestExpander.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
@@ -562,9 +552,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.696288" vertical-offset="1977" max-vertical-offset="8602">
-          <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2508" max-vertical-offset="8602">
+          <caret line="112" column="48" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createBalancedCreep.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87626547" vertical-offset="277" max-vertical-offset="1276">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -17,14 +17,19 @@ module.exports = {
             var work = [];
             var carry = [];
             var move = [];
+            var body = [];
             for (let i = 0; i < numberofParts; i++){
                 work.push(WORK);
+                body.push(WORK);
+
             }
             for (let i = 0; i < numberofParts; i++){
                 carry.push(CARRY);
+                body.push(CARRY);
             }
             for (let i = 0; i < numberofParts; i++){
                 move.push(MOVE);
+                body.push(MOVE);
             }
 
             // Set up for later when creeps get so big that they mine resources completely and have nothing to do
@@ -41,8 +46,7 @@ module.exports = {
             var work_count = work.length;
             var carry_count = carry.length;
             var move_count = work.length;
-
-            var body = work + carry + move;
+            
             return body
         }
     };
