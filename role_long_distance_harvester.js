@@ -52,7 +52,7 @@ module.exports = {
         }
 
         if (debug_module){
-            require("")
+            require("print_module_creep").run(creep, "long_distance_harvester.js")
         }
 
     }

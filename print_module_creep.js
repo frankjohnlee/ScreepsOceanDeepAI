@@ -10,15 +10,15 @@
 module.exports = {
     run: function (creep, module_str) {
 
-        if (debug_module == true){
-            console.log("______________________________________________________________________________");
-            console.log("Debuging: " +  module_str);
-            console.log("creep.room.name: " + creep.room.name);
-            console.log("Creep: " + creep);
-            console.log("Creep Role: " + creep.memory.role);
-            console.log("Working: " + creep.memory.working);
-            console.log("Creep Energy: " + creep.energy + " | Creep Storage Capacity: " +  creep.energyCapacity);
-            console.log("Creep Home Room: " + creep.memory.home_room + "Creep Target Room: " + creep.target_room);
-        }
+
+        console.log("______________________________________________________________________________");
+        console.log("Debuging: " +  module_str);
+        console.log("creep.room.name: " + creep.room.name);
+        console.log("Creep: " + creep);
+        console.log("Creep Role: " + creep.memory.role);
+        console.log("Working: " + creep.memory.working);
+        console.log("Creep Energy: " + creep.energy + " | Creep Storage Capacity: " +  creep.energyCapacity);
+        console.log("Creep Home Room: " + creep.memory.home_room + "Creep Target Room: " + creep.target_room);
+
     }
 };

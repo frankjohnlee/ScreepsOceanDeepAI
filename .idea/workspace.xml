@@ -24,12 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="role_long_distance_harvester.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="role_long_distance_harvester.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8292683" vertical-offset="440" max-vertical-offset="1430">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="968">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="24" />
+              <folding>
+                <element signature="e#1252#2087#0" expanded="false" />
+                <element signature="e#2219#2280#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print_module_creep.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="print_module_creep.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/print_module_creep.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+            <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="902">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
@@ -152,8 +155,8 @@
         <option value="$PROJECT_DIR$/function_fortify_walls.js" />
         <option value="$PROJECT_DIR$/04_auto_construction_site.js" />
         <option value="$PROJECT_DIR$/03_creep_spawner.js" />
-        <option value="$PROJECT_DIR$/print_module_creep.js" />
         <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
+        <option value="$PROJECT_DIR$/print_module_creep.js" />
       </list>
     </option>
   </component>
@@ -503,18 +506,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/print_module_creep.js">
+    <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="968">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="e#1252#2087#0" expanded="false" />
+            <element signature="e#2219#2280#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
+    <entry file="file://$PROJECT_DIR$/print_module_creep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8292683" vertical-offset="440" max-vertical-offset="1430">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="902">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
