@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1364" max-vertical-offset="7678">
-              <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.7424072" vertical-offset="1496" max-vertical-offset="7678">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="100" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -100,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function_fortify_walls.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="function_fortify_walls.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/function_fortify_walls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4878049" vertical-offset="1254" max-vertical-offset="2398">
+            <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2398">
               <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
         <option value="$PROJECT_DIR$/function_go_to_home_room.js" />
         <option value="$PROJECT_DIR$/function_go_to_target_room.js" />
-        <option value="$PROJECT_DIR$/03_creep_spawner.js" />
         <option value="$PROJECT_DIR$/function_fortify_walls.js" />
+        <option value="$PROJECT_DIR$/03_creep_spawner.js" />
       </list>
     </option>
   </component>
@@ -456,14 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1364" max-vertical-offset="7678">
-          <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/role_waller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="902">
@@ -474,11 +466,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/function_fortify_walls.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4878049" vertical-offset="1254" max-vertical-offset="2398">
+        <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2398">
           <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7424072" vertical-offset="1496" max-vertical-offset="7678">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="100" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

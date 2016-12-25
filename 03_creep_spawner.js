@@ -96,9 +96,9 @@ module.exports = {
 
         // Get energy used to generate creeps, past 1500 apparently is inefficient
         var energy = curr_spawn.room.energyCapacityAvailable;
-        if (energy > 1500) {
-            energy = 1500
-        }
+        //if (energy > 1500) {
+        //    energy = 1500
+        //}
         var avail_energy = curr_spawn.room.energyAvailable;
 
 
