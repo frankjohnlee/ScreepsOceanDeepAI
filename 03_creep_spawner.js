@@ -319,7 +319,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Waller',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
             }
             else if (current_number_of_expanders < min_number_expanders) {
@@ -333,7 +333,7 @@ module.exports = {
                     role: 'Expander',
                     working: false,
                     target_room: 'W78N73',
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
 
