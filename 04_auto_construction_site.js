@@ -25,7 +25,7 @@ module.exports = {
 
         }
         if (curr_room.controller.level > 2) {
-            require('auto_build').run(curr_room, 25, 31, STRUCTURE_TOWERS);
+            require('auto_build').run(curr_room, 25, 31, STRUCTURE_TOWER);
             require('auto_build').run(curr_room, 27, 28, STRUCTURE_STORAGE);
         }
         if (debug_module){
