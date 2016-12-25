@@ -170,7 +170,7 @@ module.exports = {
             curr_spawn.createCreep([WORK, CARRY, MOVE], undefined, {
                 role: 'Harvester',
                 working: false,
-                home_room: curr_spawn.roomName
+                home_room: curr_spawn.room.name
             });
         }
         var turn_off_spawning = false;
@@ -182,7 +182,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Harvester',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
             }
@@ -196,7 +196,7 @@ module.exports = {
                     role: 'WarriorMelee2',
                     working: false,
                     target_room: 'W32S77',
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
             }
@@ -208,7 +208,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'LongDistanceBuilder',
                     working: false,
-                    home_room: curr_spawn.roomName,
+                    home_room: curr_spawn.room.name,
                     target_rooms: rooms_array,
                     target_room: false
                 });
@@ -221,7 +221,7 @@ module.exports = {
                     role: 'WarriorMelee1',
                     working: false,
                     target_room: 'W32S77',
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
             }
@@ -245,7 +245,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Upgrader',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
 
@@ -259,7 +259,7 @@ module.exports = {
                     role: 'LongDistanceUpgrader',
                     working: false,
                     target_room: Game.rooms['W32S77'],
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
             }
@@ -270,7 +270,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Energizer',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
 
                 });
                 //creep.memory.home_room = creep.roomName;
@@ -283,7 +283,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Towerer',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
 
@@ -295,7 +295,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Repairer',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
                 //creep.memory.home_room = creep.roomName;
 
@@ -307,7 +307,7 @@ module.exports = {
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'Builder',
                     working: false,
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
 
 
