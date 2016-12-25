@@ -46,7 +46,7 @@ module.exports = {
             var work_count = work.length;
             var carry_count = carry.length;
             var move_count = work.length;
-            
+
             return body
         }
     };

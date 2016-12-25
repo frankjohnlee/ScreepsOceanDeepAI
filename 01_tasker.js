@@ -20,7 +20,6 @@ module.exports = {
 
             var creep = Game.creeps[name]; // access the actual object of my creep with str key
             if (creep != undefined){
-                var creep_role = creep.memory.role;
                 var con_site_length = creep.room.find(FIND_CONSTRUCTION_SITES).length;
                 var con_side_less_than_10 = con_site_length < 99;
                 if (con_side_less_than_10 && creep.memory.role != 'Builder' &&  creep.memory.role != 'Waller'){
@@ -29,56 +28,31 @@ module.exports = {
                 }
 
 
-                if (creep_role == 'Harvester') {
-                    require('role_harvester').run(creep);
-                }
-                else if (creep_role == 'Upgrader') {
-                    require('role_upgrader').run(creep);
+                /* Harvester Check 01a_check_harvester.js
+                Returns True
+                    (1) if the current creep's room is it's home room and there's no harvesters in that room
+
+                Returns False
+                    (1) if the current creep's room is not in home room
+                    or
+                    (2) if the current creep's room is in it's home room but there is at least one harvester in the room
+
+                    @type creep: Creep Object
+                    @rtype: bool
+
+                 */
+                var no_harvesters = false;
+                no_harvesters = require('01a_check_harvester').run(creep);
+
+
+                if (no_harvesters == false){
+                    require('01b_normal_run').run(creep);
                 }
 
-                else if (creep_role == 'Builder') {
-                    require('role_builder').run(creep);
-                }
-                else if (creep_role == 'Repairer') {
-                    require('role_repairer').run(creep);
-                }
-                else if (creep_role == 'Energizer') {
-                    require('role_energizer').run(creep);
-                }
-                else if (creep_role == 'Towerer') {
-                    require('role_towerer').run(creep);
-                }
-                else if (creep_role == 'WarriorMelee1') {
-                    require('role_warrior_melee_1').run(creep);
-                }
-                else if (creep_role == 'WarriorMelee1') {
-                    require('role_warrior_melee_1').run(creep);
-                }
-                else if (creep_role == 'WarriorMelee2') {
-                    require('role_warrior_melee_2').run(creep);
-                }
-                else if (creep_role == 'TownGuard') {
-                    require('role_warrior_melee_1').run(creep);
-                }
-                else if (creep_role == 'Expander') {
-                    require('role_expander').run(creep);
-                }
-                else if (creep_role == 'LongDistanceHarvester') {
-                    require('role_long_distance_harvester').run(creep);
-                }
-                else if (creep_role == 'Waller' || creep_role == 'waller') {
-                    require('role_waller').run(creep);
-                }
-                else if (creep_role == 'storer' || creep_role == 'Storer') {
-                    require('role_storer').run(creep);
-                }
-                else if (creep_role == 'LongDistanceBuilder'){
-                    require('role_long_distance_builder').run(creep);
-                }
             }
 
         }
-        console.log(build_roads);
+        console.log(spaces + spaces + "No Harvester Check (false means running normal): " + no_harvesters);
     }
 };
 
