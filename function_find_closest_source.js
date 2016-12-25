@@ -10,7 +10,7 @@
 module.exports = {
     run: function (creep) {
         var source = creep.pos.findClosestByPath(FIND_SOURCES,
-            {filter: object => object.energy > 0}
+            {filter: object => object.energy != 0}
         );
         return source;
 

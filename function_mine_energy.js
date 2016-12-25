@@ -12,10 +12,11 @@ module.exports = {
         var first_letter_role = creep.memory.role.slice(0,1);
         creep.say(first_letter_role + "GetE");
         var source = require('function_find_closest_source').run(creep);
+
         if (source != undefined){
             require('function_move_in_range_harvest').run(creep, source);
         }
-        else if (creep.energy > 40){
+        else if (creep.energy > 50){
             creep.memory.working = true
         }
     }

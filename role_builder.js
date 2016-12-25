@@ -20,7 +20,10 @@ module.exports = {
 
         if (creep.memory.working == true) { // If creep is currently set to working
             creep.say("bWorking");
-            require('function_build').run(creep);
+            var try_build = require('function_build').run(creep);
+            if (try_build == false){
+                require('role_upgrader').run(creep);
+            }
 
         }
         if (debug_module == true){

@@ -79,9 +79,7 @@ module.exports = {
                 return true
             }
         }
-        else {
-            require('role_upgrader').run(creep);
-        }
+
 
 
         if (debug_module == true){
@@ -94,6 +92,7 @@ module.exports = {
             console.log("con_target: " + con_target);
             console.log("______________________________________________________________________________");
         }
+        return false
     }
 };
 
