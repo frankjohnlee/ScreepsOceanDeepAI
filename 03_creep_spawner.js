@@ -233,7 +233,7 @@ module.exports = {
                     role: 'LongDistanceHarvester',
                     working: false,
                     target_room: 'W32S77',
-                    home_room: curr_spawn.roomName
+                    home_room: curr_spawn.room.name
                 });
             }
 

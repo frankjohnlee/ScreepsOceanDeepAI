@@ -17,8 +17,8 @@ module.exports = {
         console.log("Creep: " + creep);
         console.log("Creep Role: " + creep.memory.role);
         console.log("Working: " + creep.memory.working);
-        console.log("Creep Energy: " + creep.energy + " | Creep Storage Capacity: " +  creep.energyCapacity);
-        console.log("Creep Home Room: " + creep.memory.home_room + "Creep Target Room: " + creep.target_room);
+        console.log("Creep Energy: " + creep.carry.energy + " | Creep Storage Capacity: " +  creep.carry.carryCapacity);
+        console.log("Creep Home Room: " + creep.memory.home_room + " | Creep Target Room: " + creep.memory.target_room);
 
     }
 };
