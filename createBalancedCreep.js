@@ -28,6 +28,16 @@ module.exports = {
             }
 
             // Set up for later when creeps get so big that they mine resources completely and have nothing to do
+
+            /*
+             - a normal source will have 3000 energy and regenerate with a defined speed
+             - a bigger creep would be done quicker but would have to do nothing after that and more expensive and time consuming to produce
+             - you actually "need" 5 work-parts and will have time to spare
+             - but if you add 1 carry, and repair your container you will need more time repairing then you had time to spare
+             so you lose some resources that you can not get done mining before it renews itself. so you add another WORK-part 6 WORK,
+             mostly 2 MOVE and 1 CARRY
+             - a function that is only called every 5. tick because repair takes 5 times what it can collect in 1 tick
+             */
             var work_count = work.length;
             var carry_count = carry.length;
             var move_count = work.length;

@@ -35,6 +35,12 @@ module.exports = {
         (2) issue with construction site. Posted on Reddit to ask about it
         https://www.reddit.com/r/screeps/comments/5j91t2/trouble_filtering_construction_sites/
 
+        Sunday Dec 25, 2016
+        How to run per a certain amount of ticks
+         oh... simple math... well... modulo will give the result of a devision... the... ah... how its called in english.. decimal places
+         10 % 2 == 0 because 10 / 2 = 5 with no decimal places
+
+
         Monday December 19, 2016
         - Currently have an issue with my warrior1, seems like the problem is in function_go_to_room.js
         - Also issue with construction site. Posted on Reddit to ask about it https://www.reddit.com/r/screeps/comments/5j91t2/trouble_filtering_construction_sites/
