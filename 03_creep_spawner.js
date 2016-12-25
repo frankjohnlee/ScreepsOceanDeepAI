@@ -75,7 +75,7 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-        min_number_long_distance_harvesters = 0;
+        min_number_long_distance_harvesters = 1;
         //min_number_harvesters = min_number_harvesters * 4; // DELETE THIS WHEN NOT IN SIMULATION
 
         // energizers is set to 0 since Harvesters become energizers if spawn is full
@@ -228,6 +228,7 @@ module.exports = {
             else if (current_number_of_long_distance_harvesters < min_number_long_distance_harvesters) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Harvester. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
+                body_parts_list = [WORK, CARRY, MOVE];
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'LongDistanceHarvester',
                     working: false,

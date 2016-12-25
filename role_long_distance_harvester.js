@@ -1,9 +1,7 @@
 module.exports = {
     run: function (creep) {
-        //console.log("debug: LDH");
-        //console.log(creep.memory.target_room);
-        //console.log(creep.memory.home_room);
 
+        var debug_module = true;
         require('function_working_status').run(creep); // When creep is carrying max energy working becomes false.
         creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
 
@@ -53,6 +51,9 @@ module.exports = {
             require("role_harvester").run(creep);
         }
 
+        if (debug_module){
+            require("")
+        }
 
     }
 };
