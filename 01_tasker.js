@@ -44,7 +44,7 @@ module.exports = {
                 var no_harvesters = false;
                 no_harvesters = require('01a_check_harvester').run(creep);
 
-
+                // if not ran then every creep will perform whatever role they have in their memory
                 if (no_harvesters == false){
                     require('01b_normal_run').run(creep);
                 }

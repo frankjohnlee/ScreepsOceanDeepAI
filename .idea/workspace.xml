@@ -49,8 +49,8 @@
       <file leaf-file-name="01_tasker.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01_tasker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17073171" vertical-offset="506" max-vertical-offset="1408">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="42" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.58536583" vertical-offset="484" max-vertical-offset="1408">
+              <caret line="46" column="99" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="99" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/010_emergency_tasker.js" />
         <option value="$PROJECT_DIR$/01a_emergency_tasker.js" />
         <option value="$PROJECT_DIR$/01b_normal_run.js" />
-        <option value="$PROJECT_DIR$/01_tasker.js" />
         <option value="$PROJECT_DIR$/01a_check_harvester.js" />
+        <option value="$PROJECT_DIR$/01_tasker.js" />
       </list>
     </option>
   </component>
@@ -594,8 +594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_tasker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17073171" vertical-offset="506" max-vertical-offset="1408">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="42" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.58536583" vertical-offset="484" max-vertical-offset="1408">
+          <caret line="46" column="99" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="99" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
