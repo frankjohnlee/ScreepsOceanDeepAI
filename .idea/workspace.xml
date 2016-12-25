@@ -72,8 +72,8 @@
       <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64341956" vertical-offset="4774" max-vertical-offset="7942">
-              <caret line="243" column="126" selection-start-line="243" selection-start-column="126" selection-end-line="243" selection-end-column="126" />
+            <state vertical-scroll-proportion="0.5793026" vertical-offset="1487" max-vertical-offset="8602">
+              <caret line="91" column="9" selection-start-line="90" selection-start-column="54" selection-end-line="91" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -519,8 +519,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64341956" vertical-offset="4774" max-vertical-offset="7942">
-          <caret line="243" column="126" selection-start-line="243" selection-start-column="126" selection-end-line="243" selection-end-column="126" />
+        <state vertical-scroll-proportion="0.5793026" vertical-offset="1487" max-vertical-offset="8602">
+          <caret line="91" column="9" selection-start-line="90" selection-start-column="54" selection-end-line="91" selection-end-column="9" />
           <folding />
         </state>
       </provider>

@@ -36,8 +36,8 @@ module.exports = {
             var min_number_long_distance_harvesters = 2;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
-            var min_number_upgraders = 0;
-            var min_number_builders = 3;
+            var min_number_upgraders = 1;
+            var min_number_builders = 2;
             var min_number_warriors = 0;
             var min_number_expanders = 0;
             var min_number_long_distance_upgraders = 0;
@@ -51,8 +51,8 @@ module.exports = {
             var min_number_long_distance_harvesters = 2;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
-            var min_number_upgraders = 0;
-            var min_number_builders = 3;
+            var min_number_upgraders = 1;
+            var min_number_builders = 2;
             var min_number_warriors = 0;
             var min_number_expanders = 0;
             var min_number_long_distance_upgraders = 0;
@@ -60,18 +60,48 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-        else { // (current_spawn_level == 5)
+        else if (current_spawn_level == 5) {
             var min_number_repairers = 1;
-            var min_number_harvesters = 3;
-            var min_number_long_distance_harvesters = 2;
+            var min_number_harvesters = 2;
+            var min_number_long_distance_harvesters = 1;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
-            var min_number_upgraders = 2;
-            var min_number_builders = 3;
+            var min_number_upgraders = 1;
+            var min_number_builders = 2;
             var min_number_warriors = 0;
             var min_number_expanders = 0;
             var min_number_long_distance_upgraders = 0;
-            var min_number_wallers = 2;
+            var min_number_wallers = 1;
+            var min_number_warriors1 = 0;
+            var min_number_long_distance_builders = 0;
+        }
+        else if (current_spawn_level == 6) {
+            var min_number_repairers = 1;
+            var min_number_harvesters = 2;
+            var min_number_long_distance_harvesters = 1;
+            var min_number_energizers = 0;
+            var min_number_towerers = 0;
+            var min_number_upgraders = 1;
+            var min_number_builders = 1;
+            var min_number_warriors = 0;
+            var min_number_expanders = 0;
+            var min_number_long_distance_upgraders = 0;
+            var min_number_wallers = 1;
+            var min_number_warriors1 = 0;
+            var min_number_long_distance_builders = 0;
+        }
+        else {
+            var min_number_repairers = 1;
+            var min_number_harvesters = 2;
+            var min_number_long_distance_harvesters = 1;
+            var min_number_energizers = 0;
+            var min_number_towerers = 0;
+            var min_number_upgraders = 1;
+            var min_number_builders = 1;
+            var min_number_warriors = 0;
+            var min_number_expanders = 0;
+            var min_number_long_distance_upgraders = 0;
+            var min_number_wallers = 1;
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
