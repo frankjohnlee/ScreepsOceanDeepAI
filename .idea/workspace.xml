@@ -24,16 +24,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="role_long_distance_harvester.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="role_long_distance_harvester.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="968">
-              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.07317073" vertical-offset="0" max-vertical-offset="990">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding>
-                <element signature="e#1252#2087#0" expanded="false" />
-                <element signature="e#2219#2280#0" expanded="false" />
-                <marker date="1482689986504" expanded="true" signature="17:2410" placeholder="{...}" />
-                <marker date="1482689986504" expanded="true" signature="45:2408" placeholder="{...}" />
+                <element signature="e#1208#2043#0" expanded="false" />
+                <element signature="e#2175#2236#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6929134" vertical-offset="6754" max-vertical-offset="7700">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6754" max-vertical-offset="7700">
               <caret line="335" column="51" selection-start-line="335" selection-start-column="51" selection-end-line="335" selection-end-column="51" />
               <folding />
             </state>
@@ -156,9 +154,9 @@
         <option value="$PROJECT_DIR$/function_go_to_target_room.js" />
         <option value="$PROJECT_DIR$/function_fortify_walls.js" />
         <option value="$PROJECT_DIR$/04_auto_construction_site.js" />
-        <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
         <option value="$PROJECT_DIR$/print_module_creep.js" />
         <option value="$PROJECT_DIR$/03_creep_spawner.js" />
+        <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
       </list>
     </option>
   </component>
@@ -500,19 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="968">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-          <folding>
-            <element signature="e#1252#2087#0" expanded="false" />
-            <element signature="e#2219#2280#0" expanded="false" />
-            <marker date="1482689986504" expanded="true" signature="17:2410" placeholder="{...}" />
-            <marker date="1482689986504" expanded="true" signature="45:2408" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/print_module_creep.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
@@ -523,9 +508,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03_creep_spawner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6929134" vertical-offset="6754" max-vertical-offset="7700">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6754" max-vertical-offset="7700">
           <caret line="335" column="51" selection-start-line="335" selection-start-column="51" selection-end-line="335" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/role_long_distance_harvester.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07317073" vertical-offset="0" max-vertical-offset="990">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#1208#2043#0" expanded="false" />
+            <element signature="e#2175#2236#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

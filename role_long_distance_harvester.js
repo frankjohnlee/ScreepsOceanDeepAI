@@ -1,12 +1,11 @@
 module.exports = {
     run: function (creep) {
 
-        var debug_module = true;
+        var debug_module = false;
         require('function_working_status').run(creep); // When creep is carrying max energy working becomes false.
         creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
 
         var home_room = creep.memory.home_room;
-        creep.memory.target_room = 'W21S79';
         var creep_current_room = creep.room.name;
         var in_target_room = creep_current_room == creep.memory.target_room;
         var in_home_room = creep_current_room == home_room;
@@ -53,6 +52,8 @@ module.exports = {
 
         if (debug_module){
             require("print_module_creep").run(creep, "long_distance_harvester.js")
+            console.log("in_target_room: " + in_target_room);
+            console.log("in_home_room: " + in_home_room);
         }
 
     }
