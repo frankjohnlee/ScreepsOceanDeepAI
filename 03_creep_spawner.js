@@ -75,8 +75,22 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-        min_number_long_distance_harvesters = 1;
-        //min_number_harvesters = min_number_harvesters * 4; // DELETE THIS WHEN NOT IN SIMULATION
+
+
+        // GLOBAL CONTROL, uncomment one line to adjust for all rooms regardless of level
+        //var min_number_repairers = 1;
+        //var min_number_harvesters = 3;
+        //var min_number_long_distance_harvesters = 2;
+        //var min_number_energizers = 0;
+        //var min_number_towerers = 0;
+        //var min_number_upgraders = 2;
+        //var min_number_builders = 3;
+        //var min_number_warriors = 0;
+        //var min_number_expanders = 0;
+        //var min_number_long_distance_upgraders = 0;
+        //var min_number_wallers = 2;
+        //var min_number_warriors1 = 0;
+        //var min_number_long_distance_builders = 0;
 
         // energizers is set to 0 since Harvesters become energizers if spawn is full
         var current_number_of_harvesters = _.sum(creep_list, (c) => c.memory.role == 'Harvester');
@@ -184,7 +198,7 @@ module.exports = {
                     working: false,
                     home_room: curr_spawn.room.name
                 });
-                //creep.memory.home_room = creep.roomName;
+
             }
 
             else if (current_number_of_warriors < min_number_warriors) {
@@ -198,7 +212,7 @@ module.exports = {
                     target_room: 'W32S77',
                     home_room: curr_spawn.room.name
                 });
-                //creep.memory.home_room = creep.roomName;
+
             }
             else if (current_number_of_long_distance_builders < min_number_long_distance_builders) {
                 var body_parts_list = require('createBalancedCreep').run(energy);
@@ -223,12 +237,11 @@ module.exports = {
                     target_room: 'W32S77',
                     home_room: curr_spawn.room.name
                 });
-                //creep.memory.home_room = creep.roomName;
+
             }
             else if (current_number_of_long_distance_harvesters < min_number_long_distance_harvesters) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Harvester. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                body_parts_list = [WORK, CARRY, MOVE];
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'LongDistanceHarvester',
                     working: false,
@@ -247,7 +260,7 @@ module.exports = {
                     working: false,
                     home_room: curr_spawn.room.name
                 });
-                //creep.memory.home_room = creep.roomName;
+
 
             }
             else if (current_number_of_long_distance_upgraders < min_number_long_distance_upgraders) {
@@ -261,7 +274,7 @@ module.exports = {
                     target_room: Game.rooms['W32S77'],
                     home_room: curr_spawn.room.name
                 });
-                //creep.memory.home_room = creep.roomName;
+
             }
             else if (current_number_of_energizers < min_number_energizers) {
                 var body_parts_list = require('createBalancedCreep').run(energy);
@@ -273,7 +286,6 @@ module.exports = {
                     home_room: curr_spawn.room.name
 
                 });
-                //creep.memory.home_room = creep.roomName;
 
             }
             else if (current_number_of_towerers < min_number_towerers) {
@@ -297,7 +309,6 @@ module.exports = {
                     working: false,
                     home_room: curr_spawn.room.name
                 });
-                //creep.memory.home_room = creep.roomName;
 
             }
             else if (current_number_of_builders < min_number_builders) {
