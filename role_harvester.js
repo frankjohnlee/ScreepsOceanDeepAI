@@ -10,11 +10,8 @@
 module.exports = {
     run: function (creep) {
         require('function_working_status').run(creep);
-
-        if (creep.memory.working == false) {
-            require('function_mine_energy').run(creep);
-            }
-        else if (creep.memory.working == true) { // If creep is currently set to working
+        require('function_working_false_then_mine').run(creep);
+        if (creep.memory.working == true) { // If creep is currently set to working
             var spawn_array = creep.room.find(FIND_MY_SPAWNS);
             var spawn = creep.pos.findClosestByPath(spawn_array);
             if (spawn.energy == spawn.energyCapacity) {

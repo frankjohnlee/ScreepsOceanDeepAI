@@ -1,5 +1,6 @@
 module.exports = {
     run: function (curr_spawn, creep_list, current_spawn_level) {
+
         if (current_spawn_level == 1) {
             var min_number_repairers = 0;
             var min_number_harvesters = 3;
@@ -133,7 +134,7 @@ module.exports = {
         var current_number_of_long_distance_harvesters = _.sum(Game.creeps, (c) => c.memory.role == 'LongDistanceHarvester');
         var current_number_of_long_distance_upgraders = _.sum(Game.creeps, (c) => c.memory.role == 'LongDistanceUpgraders');
         var current_number_of_wallers = _.sum(creep_list, (c) => c.memory.role == 'Waller' || c.memory.role == 'waller');
-        var current_number_of_warriors1 = _.sum(Game.creeps, (c) => c.memory.role == 'WarriorMelee1');
+        var current_number_of_warriors1 = _.sum(creep_list, (c) => c.memory.role == 'WarriorMelee1');
         var current_number_of_expanders = _.sum(Game.creeps, (c) => c.memory.role == 'Expander');
         var current_number_of_long_distance_builders = _.sum(Game.creeps, (c) => c.memory.role == 'LongDistanceBuilder');
 
@@ -210,6 +211,7 @@ module.exports = {
         console.log(spaces + spaces + spaces + spaces + spaces + creep_count_txt);
         console.log(spaces + spaces + spaces + spaces + spaces + ideal_count_text);
 
+
         if (current_number_of_harvesters < 1) {
             curr_spawn.createCreep([WORK, CARRY, MOVE], undefined, {
                 role: 'Harvester',
@@ -232,7 +234,18 @@ module.exports = {
                 });
 
             }
-
+            else if (current_number_of_warriors1 < min_number_warriors1) {
+                var body_parts_list_MW1 = require('createBalancedMeleeWarrior').run(energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more warriors1. Will create with energy: ATTACK, MOVE, MOVE, MOVE " + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
+                curr_spawn.createCreep(body_parts_list_MW1, undefined, {
+                    role: 'WarriorMelee1',
+                    working: false,
+                    target_room: 'W31S76',
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn
+                });
+            }
             else if (current_number_of_warriors < min_number_warriors) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more warrior2. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
@@ -262,18 +275,8 @@ module.exports = {
                 });
 
             }
-            else if (current_number_of_warriors1 < min_number_warriors1) {
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more warriors1. Will create with energy: ATTACK, MOVE, MOVE, MOVE " + ", Current Available energy: " + avail_energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
-                curr_spawn.createCreep([ATTACK, MOVE, MOVE, MOVE], undefined, {
-                    role: 'WarriorMelee1',
-                    working: false,
-                    target_room: 'W32S77',
-                    home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
-                });
 
-            }
+
             else if (current_number_of_long_distance_harvesters < min_number_long_distance_harvesters) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Harvester. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
