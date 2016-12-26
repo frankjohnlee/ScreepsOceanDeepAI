@@ -108,20 +108,12 @@ module.exports = {
         }
 
 
-        // GLOBAL CONTROL, uncomment one line to adjust for all rooms regardless of level
-        //var min_number_repairers = 1;
-        //var min_number_harvesters = 3;
-        min_number_long_distance_harvesters = 0;
-        //var min_number_energizers = 0;
-        //var min_number_towerers = 0;
-        //var min_number_upgraders = 2;
-        //var min_number_builders = 3;
-        //var min_number_warriors = 0;
-        //var min_number_expanders = 1;
-        //var min_number_long_distance_upgraders = 0;
-        //var min_number_wallers = 2;
-        //var min_number_warriors1 = 0;
-        //var min_number_long_distance_builders = 0;
+        if (curr_spawn.name = 'Spawn1'){
+            var min_number_cannon_fodder = 2;
+        }
+        else{
+            var min_number_cannon_fodder = 0;
+        }
 
         // energizers is set to 0 since Harvesters become energizers if spawn is full
         var current_number_of_harvesters = _.sum(creep_list, (c) => c.memory.role == 'Harvester');
@@ -137,6 +129,7 @@ module.exports = {
         var current_number_of_warriors1 = _.sum(creep_list, (c) => c.memory.role == 'WarriorMelee1');
         var current_number_of_expanders = _.sum(Game.creeps, (c) => c.memory.role == 'Expander');
         var current_number_of_long_distance_builders = _.sum(Game.creeps, (c) => c.memory.role == 'LongDistanceBuilder');
+        var current_number_of_cannon_fodder = _.sum(Game.creeps, (c) => c.memory.role == 'CannonFodder');
 
 
         // Get energy used to generate creeps, past 1500 apparently is inefficient
@@ -176,6 +169,7 @@ module.exports = {
         creep_count_txt += 'Wallers: ' + current_number_of_wallers + " || ";
         creep_count_txt += 'Warriors1: ' + current_number_of_warriors1 + " || ";
         creep_count_txt += 'Expander: ' + current_number_of_expanders + " || ";
+        creep_count_txt += 'Cannon Fodder: ' + current_number_of_cannon_fodder + " || ";
 
         var ideal_count_text = 'Ideal Count   => ';
         ideal_count_text += 'Harvesters: ' + min_number_harvesters + " || ";
@@ -190,7 +184,7 @@ module.exports = {
         ideal_count_text += 'Wallers: ' + min_number_wallers + " || ";
         ideal_count_text += 'Warriors1: ' + min_number_warriors1 + " || ";
         ideal_count_text += 'Expander: ' + min_number_expanders + " || ";
-
+        ideal_count_text += 'Cannon Fodder: ' + min_number_cannon_fodder + " || ";
 
         // OUTPUT MESSAGE HERE
         var total_creep_in_room = _.sum(creep_list, (c) => c != undefined);
@@ -242,6 +236,19 @@ module.exports = {
                     role: 'WarriorMelee1',
                     working: false,
                     target_room: 'W31S76',
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn
+                });
+            }
+            else if (current_number_of_cannon_fodder < min_number_cannon_fodder){
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more CannonFodder. Will create with energy: " + 50 + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + [MOVE]);
+
+
+                curr_spawn.createCreep([MOVE], undefined, {
+                    role: 'CannonFodder',
+                    working: false,
+                    target_room: 'W32S77',
                     home_room: curr_spawn.room.name,
                     home_spawn: curr_spawn
                 });

@@ -10,7 +10,7 @@
 module.exports = {
     run: function (creep, room) {
 
-        var debug_module = true;
+        var debug_module = false;
         var room_object = room;
         var exit = creep.room.findExitTo(room_object);
         creep.say("RM:" + room);
