@@ -9,14 +9,10 @@ module.exports = {
 
         if (creep.memory.working == true) { // If creep is currently set to working
 
-            var storages = creep.room.find(FIND_MY_STRUCTURES, {
-            filter: object =>
-            object.structureType == STRUCTURE_STORAGE
-        });
-
+            var storage = creep.room.storage;
         creep.say("sLen:" + storages);
 
-        if (storages.length == 0 || storages[0].energy == storages[0].energyCapacity) {
+        if (storages != undefined || storages.energy == storages.energyCapacity) {
             require('role_builder').run(creep);
         }
         else
