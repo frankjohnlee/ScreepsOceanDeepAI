@@ -24,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="function_working_false_then_mine.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/function_working_false_then_mine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="01b_normal_run.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01b_normal_run.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,21 +47,19 @@
       <file leaf-file-name="role_energizer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/role_energizer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1408">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="1342">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createBalancedMeleeWarrior1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/createBalancedMeleeWarrior1.js">
+      <file leaf-file-name="role_repairer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/role_repairer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1078">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,18 +89,8 @@
       <file leaf-file-name="role_storer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/role_storer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3902439" vertical-offset="0" max-vertical-offset="902">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="02_spawn_controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02_spawn_controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682">
-              <caret line="9" column="70" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.34146342" vertical-offset="0" max-vertical-offset="902">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -123,6 +101,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
               <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="role_builder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/role_builder.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="1056">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="02_spawn_controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02_spawn_controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682">
+              <caret line="9" column="70" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -166,13 +164,13 @@
         <option value="$PROJECT_DIR$/02_spawn_controller.js" />
         <option value="$PROJECT_DIR$/auto_build.js" />
         <option value="$PROJECT_DIR$/01_tasker.js" />
-        <option value="$PROJECT_DIR$/role_energizer.js" />
         <option value="$PROJECT_DIR$/function_mine_storage.js" />
         <option value="$PROJECT_DIR$/0_main.js" />
         <option value="$PROJECT_DIR$/role_harvester.js" />
         <option value="$PROJECT_DIR$/role_warrior_melee_1.js" />
         <option value="$PROJECT_DIR$/function_working_false_then_mine.js" />
         <option value="$PROJECT_DIR$/03_creep_spawner.js" />
+        <option value="$PROJECT_DIR$/role_energizer.js" />
         <option value="$PROJECT_DIR$/role_storer.js" />
       </list>
     </option>
@@ -597,22 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/role_builder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1056">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/role_repairer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1078">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/function_mine_storage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
@@ -717,14 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/role_harvester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/createBalancedMeleeWarrior1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="902">
@@ -732,14 +706,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/role_energizer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1408">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,10 +759,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/role_energizer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="1342">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/role_repairer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1078">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/role_harvester.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/role_builder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1056">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/role_storer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3902439" vertical-offset="0" max-vertical-offset="902">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.34146342" vertical-offset="0" max-vertical-offset="902">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
           <folding />
         </state>
       </provider>

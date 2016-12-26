@@ -23,17 +23,14 @@ module.exports = {
                     filters: object =>
                     object.structureType == STRUCTURE_CONTAINER
                 });
-                var storages = creep.room.find(FIND_MY_STRUCTURES, {
-                    filters: object =>
-                    object.structureType == STRUCTURE_STORAGE
-                });
+                var storage = creep.room.storage;
 
                 towers.sort((b,a) => a.energy - b.energy);
                 require('function_math_shuffle').run(extensions);
                 var structure = towers;
                 structure.concat(extensions);
                 structure.concat(containers);
-                structure.concat(storages);
+                structure.concat(storage);
             }
             else {
                 structure = structre_rec;
