@@ -18,7 +18,7 @@ module.exports = {
         else if (current_spawn_level == 2) {
             var min_number_repairers = 1;
             var min_number_harvesters = 3;
-            var min_number_long_distance_harvesters = 2;
+            var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 2;
@@ -33,7 +33,7 @@ module.exports = {
         else if (current_spawn_level == 3) {
             var min_number_repairers = 1;
             var min_number_harvesters = 3;
-            var min_number_long_distance_harvesters = 2;
+            var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 1;
@@ -48,7 +48,7 @@ module.exports = {
         else if (current_spawn_level == 4) {
             var min_number_repairers = 1;
             var min_number_harvesters = 3;
-            var min_number_long_distance_harvesters = 1;
+            var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 1;
@@ -62,8 +62,8 @@ module.exports = {
         }
         else if (current_spawn_level == 5) {
             var min_number_repairers = 1;
-            var min_number_harvesters = 2;
-            var min_number_long_distance_harvesters = 1;
+            var min_number_harvesters = 3;
+            var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 1;
@@ -78,7 +78,7 @@ module.exports = {
         else if (current_spawn_level == 6) {
             var min_number_repairers = 1;
             var min_number_harvesters = 2;
-            var min_number_long_distance_harvesters = 1;
+            var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 1;
@@ -92,11 +92,11 @@ module.exports = {
         }
         else {
             var min_number_repairers = 1;
-            var min_number_harvesters = 2;
-            var min_number_long_distance_harvesters = 1;
+            var min_number_harvesters = 1;
+            var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
-            var min_number_upgraders = 1;
+            var min_number_upgraders = 0;
             var min_number_builders = 1;
             var min_number_warriors = 0;
             var min_number_expanders = 0;
@@ -110,7 +110,7 @@ module.exports = {
         // GLOBAL CONTROL, uncomment one line to adjust for all rooms regardless of level
         //var min_number_repairers = 1;
         //var min_number_harvesters = 3;
-        //var min_number_long_distance_harvesters = 2;
+        min_number_long_distance_harvesters = 0;
         //var min_number_energizers = 0;
         //var min_number_towerers = 0;
         //var min_number_upgraders = 2;
@@ -140,8 +140,8 @@ module.exports = {
 
         // Get energy used to generate creeps, past 1500 apparently is inefficient
         var energy = curr_spawn.room.energyCapacityAvailable;
-        //if (energy > 1500) {
-        //    energy = 1500
+        //if (energy > 2000) {
+        //    energy = 2000
         //}
         var avail_energy = curr_spawn.room.energyAvailable;
 
