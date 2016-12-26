@@ -24,6 +24,7 @@ module.exports = {
 
 
 
+
         //require('auto.room.initialise').run();
         //Game.user.attack_targets = true;
 

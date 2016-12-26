@@ -76,8 +76,10 @@ module.exports = {
             if (creep.build(con_target) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(con_target);
                 creep.say("bGoConSite");
-                return true
             }
+        }
+        else {
+            require('role_upgrader').run(creep);
         }
 
 

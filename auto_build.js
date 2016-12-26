@@ -3,14 +3,14 @@
  */
 module.exports = {
 
-    run: function(curr_room, x_cor, y_cor, STRUCTURE_TYPE){
+    run: function (curr_room, x_cor, y_cor, STRUCTURE_TYPE, second_rec = false) {
 
         var debug_module = false;
         var debug_string = "Module: auto_build.js | ";
-        debug_string += "curr_room: " + curr_room  + " | ";
-        debug_string += "x_cor: " + x_cor  + " | ";
-        debug_string += "y_cor: " + y_cor  + " | ";
-        debug_string += "STRUCTURE_TYPE: " + STRUCTURE_TYPE  + " | ";
+        debug_string += "curr_room: " + curr_room + " | ";
+        debug_string += "x_cor: " + x_cor + " | ";
+        debug_string += "y_cor: " + y_cor + " | ";
+        debug_string += "STRUCTURE_TYPE: " + STRUCTURE_TYPE + " | ";
 
         // I will rewrite this later to include all the structures I want but for now it's just for extensions
 
@@ -26,11 +26,12 @@ module.exports = {
         //var y = position_spawn[1];
         var x = x_cor;
         var y = y_cor;
-
+        var alt_x = x - 30;
+        var alt_y = y - 30;
 
 
         // IF I cannot make anymore of the structure due to construction site limit or room controller level cap then break the loop
-        if ((curr_room.createConstructionSite(x, y, STRUCTURE_TYPE) == ERR_RCL_NOT_ENOUGH) || (curr_room.createConstructionSite(x,y, STRUCTURE_TYPE) == ERR_FULL)) {
+        if ((curr_room.createConstructionSite(x, y, STRUCTURE_TYPE) == ERR_RCL_NOT_ENOUGH) || (curr_room.createConstructionSite(x, y, STRUCTURE_TYPE) == ERR_FULL)) {
             var do_nothing = 0;
         }
         // IF SOMETHING IS WRONG WITH THE FORMATTING
@@ -52,35 +53,23 @@ module.exports = {
             // We want to check if it's getting too far away
 
 
-            while (curr_room.createConstructionSite(loop_x, loop_y, STRUCTURE_TYPE) == ERR_INVALID_TARGET
-                ){
-                if (loop_x - x < 14){
-                    loop_x ++;
-                    //loop_x_2++;
-                    if (curr_room.createConstructionSite(loop_x, loop_y, STRUCTURE_TYPE) == ERR_INVALID_TARGET){
-                        loop_y++;
-                        //loop_y_2++;
-                    }
-                }
-                else if (loop_y - y < 14) {
+            var i = 0;
+            while (curr_room.createConstructionSite(loop_x, loop_y, STRUCTURE_TYPE) == ERR_INVALID_TARGET && i < 14) {
+                i++;
+                loop_x++;
+                if (curr_room.createConstructionSite(loop_x, loop_y, STRUCTURE_TYPE) == ERR_INVALID_TARGET) {
                     loop_y++;
-                    loop_y_2++;
-                    if (curr_room.createConstructionSite(loop_x, loop_y, STRUCTURE_TYPE) == ERR_INVALID_TARGET){
-                        loop_x ++;
-                        //loop_x_2++;
-                    }
                 }
-
             }
-        }
-        if (debug_module == true){
-            console.log(debug_string);
-        }
+            if (second_rec == false){
+                require('auto_build').run(curr_room, alt_x, alt_y, STRUCTURE_TYPE, true)
+            }
 
-        // ERR_INVALID_TARGET The structure cannot be placed at the specified location.
-        // ERR_FULL You have too many construction sites. The maximum number of construction sites per player is 100.
-        // ERR_INVALID_ARGS The location is incorrect.
-        // ERR_RCL_NOT_ENOUGH Room Controller Level insufficient
+            // ERR_INVALID_TARGET The structure cannot be placed at the specified location.
+            // ERR_FULL You have too many construction sites. The maximum number of construction sites per player is 100.
+            // ERR_INVALID_ARGS The location is incorrect.
+            // ERR_RCL_NOT_ENOUGH Room Controller Level insufficient
 
+        }
     }
 };

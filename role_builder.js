@@ -10,6 +10,7 @@
 module.exports = {
     run: function (creep) {
 
+
         var debug_module = false;
         require('function_working_status').run(creep);
 
@@ -20,10 +21,20 @@ module.exports = {
 
         if (creep.memory.working == true) { // If creep is currently set to working
             creep.say("bWorking");
-            var try_build = require('function_build').run(creep);
-            if (try_build == false){
+            var target_array = creep.room.find(FIND_CONSTRUCTION_SITES);
+            var con_target = creep.pos.findClosestByPath(target_array); // Just sends builder directly to closest
+
+            if (con_target != undefined) {
+                if (creep.build(con_target) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(con_target);
+                    creep.say("bGoConSite");
+                }
+            }
+            else {
                 require('role_upgrader').run(creep);
             }
+            //require('function_build').run(creep);
+
 
         }
         if (debug_module == true){

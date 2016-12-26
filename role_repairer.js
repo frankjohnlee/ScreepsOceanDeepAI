@@ -29,8 +29,14 @@ module.exports = {
                 }
             }
             else {
-                creep.say("rNoJobs");
-                require('role_builder').run(creep);
+                if (creep.room.name == creep.home_room){
+                    require('function_go_to_target_room').run(creep);
+                }
+                else if (creep.room.name == creep.target_room){
+                    require('function_go_to_home_room').run(creep);
+                }
+                //creep.say("rNoJobs");
+                //require('role_builder').run(creep);
             }
         }
     }
