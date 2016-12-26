@@ -18,6 +18,7 @@ module.exports = {
         require('garbage_cleanup').run();
         require('01_tasker').run();
         require('02_spawn_controller').run();
+        console.log("test");
 
 
 
