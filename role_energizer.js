@@ -49,7 +49,7 @@ module.exports = {
             }
             creep.say("eLen:" + structure.length);
             if (structure[0].energy == structure[0].energyCapacity){
-                require('role_builder').run(creep);
+                require('role_storer').run(creep);
             } // delete the first of list if afterwards len is 0 then run builder
             else {
                 require('function_move_in_range_transfer').run(creep, structure[0]);
