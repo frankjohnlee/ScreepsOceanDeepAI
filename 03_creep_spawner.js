@@ -107,9 +107,8 @@ module.exports = {
             var min_number_long_distance_builders = 0;
         }
 
-
         if (curr_spawn.name = 'Spawn1'){
-            var min_number_cannon_fodder = 2;
+            var min_number_cannon_fodder =  0;
         }
         else{
             var min_number_cannon_fodder = 0;
@@ -228,31 +227,8 @@ module.exports = {
                 });
 
             }
-            else if (current_number_of_warriors1 < min_number_warriors1) {
-                var body_parts_list_MW1 = require('createBalancedMeleeWarrior').run(energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more warriors1. Will create with energy: ATTACK, MOVE, MOVE, MOVE " + ", Current Available energy: " + avail_energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
-                curr_spawn.createCreep(body_parts_list_MW1, undefined, {
-                    role: 'WarriorMelee1',
-                    working: false,
-                    target_room: 'W31S76',
-                    home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
-                });
-            }
-            else if (current_number_of_cannon_fodder < min_number_cannon_fodder){
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more CannonFodder. Will create with energy: " + 50 + ", Current Available energy: " + avail_energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + [MOVE]);
 
 
-                curr_spawn.createCreep([MOVE], undefined, {
-                    role: 'CannonFodder',
-                    working: false,
-                    target_room: 'W32S77',
-                    home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
-                });
-            }
             else if (current_number_of_warriors < min_number_warriors) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more warrior2. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
@@ -400,6 +376,31 @@ module.exports = {
                     home_spawn: curr_spawn
                 });
 
+            }
+            else if (current_number_of_cannon_fodder < min_number_cannon_fodder){
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more CannonFodder. Will create with energy: " + 50 + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + [MOVE]);
+
+
+                curr_spawn.createCreep([MOVE], undefined, {
+                    role: 'CannonFodder',
+                    working: false,
+                    target_room: 'W31S76',
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn
+                });
+            }
+            else if (current_number_of_warriors1 < min_number_warriors1) {
+                var body_parts_list_MW1 = require('createBalancedMeleeWarrior').run(energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more warriors1. Will create with energy: ATTACK, MOVE, MOVE, MOVE " + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
+                curr_spawn.createCreep(body_parts_list_MW1, undefined, {
+                    role: 'WarriorMelee1',
+                    working: false,
+                    target_room: 'W31S76',
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn
+                });
             }
 
         }

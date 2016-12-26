@@ -10,6 +10,7 @@
 module.exports = {
     run: function (creep) {
         var debug_module = false;
+        creep.memory.target_room = 'W31S76';
         if (creep.room.name == creep.memory.target_room) {
 
             var enemy_towers_array = creep.pos.findClosestByRange(FIND_HOSTILE_STRUCTURES, {

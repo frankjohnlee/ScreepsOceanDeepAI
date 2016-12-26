@@ -8,10 +8,10 @@
  */
 
 module.exports = {
-    run: function (creep) {
-        require('function_working_status').run(creep);
-        require('function_working_false_then_mine').run(creep);
-        require('functionTransferEnergy').run(creep, creep.room.controller);
-
+    run: function (creep, target) {
+        if (creep.transfer(creep.room.controller, target) == ERR_NOT_IN_RANGE) { // try to transfer
+            creep.say("uGoEnergy");
+            creep.moveTo(target);
+        }
     }
 };
