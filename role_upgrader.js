@@ -9,9 +9,17 @@
 
 module.exports = {
     run: function (creep) {
+        //console.log('                    role_upgrader.js');
+
+
         require('function_working_status').run(creep);
         require('function_working_false_then_mine').run(creep);
-        require('functionTransferEnergy').run(creep, creep.room.controller);
-
+        if (creep.memory.working == true) { // If creep is currently set to working
+            creep.say("uWorking");
+            if (creep.transfer(creep.room.controller, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) { // try to transfer
+                creep.say("uGoEnergy");
+                creep.moveTo(creep.room.controller);
+            }
+        }
     }
 };

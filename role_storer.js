@@ -8,13 +8,8 @@ module.exports = {
         var storage = creep.room.storage;
 
         if (creep.memory.working == true) { // If creep is currently set to working
+            require('function_move_in_range_transfer').run(creep, storage);
 
-            if (storage == undefined) {
-                require('role_builder').run(creep);
-            }
-            else if (storage.energy != 1000000000) {
-                require('function_move_in_range_transfer').run(creep, storage);
-            }
 
         }
     }

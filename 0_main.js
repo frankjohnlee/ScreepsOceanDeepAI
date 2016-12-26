@@ -20,6 +20,18 @@ module.exports = {
         require('02_spawn_controller').run();
 
 
+        if (Memory.attackBool == undefined) {
+            Memory.attackBool = false;
+        }
+
+        if (Memory.warrior1Parts == undefined) {
+            Memory.warrior1Parts = [ATTACK, MOVE];
+        }
+        Memory.attackBool = false;
+        Memory.warrior1Parts = [ATTACK, MOVE, MOVE];
+
+
+
 
 
 
