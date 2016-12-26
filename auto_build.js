@@ -26,8 +26,8 @@ module.exports = {
         //var y = position_spawn[1];
         var x = x_cor;
         var y = y_cor;
-        var alt_x = x - 30;
-        var alt_y = y - 30;
+        var alt_x = x - 15;
+        var alt_y = y - 15;
 
 
         // IF I cannot make anymore of the structure due to construction site limit or room controller level cap then break the loop

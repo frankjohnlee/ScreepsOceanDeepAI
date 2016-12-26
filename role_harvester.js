@@ -15,7 +15,8 @@ module.exports = {
             require('function_mine_energy').run(creep);
             }
         else if (creep.memory.working == true) { // If creep is currently set to working
-            var spawn = creep.room.find(STRUCTURE_SPAWN);
+            var spawn_array = creep.room.find(FIND_MY_SPAWNS);
+            var spawn = creep.pos.findClosestByPath(spawn_array);
             if (spawn.energy == spawn.energyCapacity) {
                 require("role_energizer").run(creep);
             }
