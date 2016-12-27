@@ -3,11 +3,9 @@
  */
 module.exports = {
 
-    run: function(curr_spawn) {
+    run: function(curr_room) {
 
         var auto_wall = false;
-
-        var curr_room = curr_spawn.room;
         var debug_module = false;
 
 

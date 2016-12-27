@@ -16,8 +16,8 @@ module.exports = {
         console.log(spaces + "Game Time: " + hours  + " hrs" + "  ||  day: " + days );
 
         require('garbage_cleanup').run();
-        require('01_tasker').run();
-        require('02_spawn_controller').run();
+        require('1.0.tasker').run();
+        require('2.0.spawnController').run();
 
         if (Memory.attackBool == undefined) {
             Memory.attackBool = false;

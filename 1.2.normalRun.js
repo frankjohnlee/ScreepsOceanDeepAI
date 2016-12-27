@@ -12,14 +12,12 @@ module.exports = {
 
         var creep_role = creep.memory.role;
 
-
         if (creep_role == 'Harvester') {
             require('role_harvester').run(creep);
         }
         else if (creep_role == 'Upgrader') {
             require('role_upgrader').run(creep);
         }
-
         else if (creep_role == 'Builder') {
             require('role_builder').run(creep);
         }
@@ -68,4 +66,3 @@ module.exports = {
     }
 
 };
-

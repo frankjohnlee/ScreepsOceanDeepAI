@@ -120,7 +120,7 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-        //
+
         if (curr_spawn.name == 'Spawn1' && Memory.attackBool === false) {
             var min_number_cannon_fodder = 0;
             var min_number_warriors1 = 1000;

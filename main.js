@@ -1,7 +1,6 @@
 
 
 module.exports.loop = function () {
-    require('0_main').run();
+    require('0.0.main').run();
 
 };
-

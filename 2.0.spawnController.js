@@ -10,13 +10,13 @@ module.exports = {
                 var creep_list = curr_spawn.room.find(FIND_MY_CREEPS);
 
                 // CREEP SPAWNER
-                require('03_creep_spawner').run(curr_spawn, creep_list, curr_room_level);
+                require('3.0.creepSpawner').run(curr_spawn, creep_list, curr_room_level);
 
                 // CONSTRUCTION
-                require('04_auto_construction_site').run(curr_spawn);
+                require('4.0.autoConstructionSite').run(curr_spawn.room);
 
                 // DEFENCE
-                require('room_defense').run(curr_spawn.room);
+                require('5.0.roomDefense').run(curr_spawn.room);
 
         }
 
