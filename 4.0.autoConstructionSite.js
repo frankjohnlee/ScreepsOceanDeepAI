@@ -9,7 +9,8 @@ module.exports = {
         var debug_module = false;
 
         if (curr_room.controller.level == 1) {
-            require('4.2.autoBuildRoads').run(curr_room);  // BUILD ROADS
+            require('4.2.autoBuildRoads').run(curr_room);
+            }   // BUILD ROADS
         if (curr_room.controller.level == 2 && auto_wall) {
             require('4.3.autoBuildWalls').run(curr_room);
             require('auto_build_walls_right').run(curr_room);
@@ -32,9 +33,7 @@ module.exports = {
             debug_string += "curr_room: " + curr_room  + " | ";
             debug_string += "if (curr_room.controller.level > 1) {: " + curr_room.controller.level > 1  + " | ";
             debug_string += "curr_room.controller.level > 2: " + curr_room.controller.level > 2  + " | ";
-            console.log(debug_string);
-        }
-                    }
+            console.log(debug_string); }
+
                 }
-            }
-        };
+            };

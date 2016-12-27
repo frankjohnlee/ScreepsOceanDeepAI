@@ -13,11 +13,7 @@ module.exports = {
 
         var debug_module = false;
         require('function_working_status').run(creep);
-
-        if (creep.memory.working == false) { // If Creep's status is set to getting_energy
-            creep.say("bGetEnergy");
-            require('function_mine_energy').run(creep);
-        }
+        require('function_working_false_then_mine').run(creep);
 
         if (creep.memory.working == true) { // If creep is currently set to working
             creep.say("bWorking");

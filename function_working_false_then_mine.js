@@ -13,7 +13,7 @@ module.exports = {
         var use_reserve = true;
         //console.log(use_reserve && creep.memory.role == 'Harvester' || creep.memory.role == 'Energizer');
         //Memory.attackBool === false &&
-        if (creep.memory.role == 'Transferer' && creep.memory.working == false){
+        if (creep.memory.role != 'Storer' && creep.memory.working == false && creep.room.storage != undefined){
             require('function_mine_storage').run(creep);
         }
         else if (creep.memory.working == false) {

@@ -71,14 +71,14 @@ module.exports = {
         }
         else if (current_spawn_level == 5) {
             var min_number_transferer = 1;
-            var min_number_storer = 4;
+            var min_number_storer = 3;
             var min_number_repairers = 1;
             var min_number_harvesters = 0;
             var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
-            var min_number_upgraders = 1;
-            var min_number_builders = 0;
+            var min_number_upgraders = 0;
+            var min_number_builders = 1;
             var min_number_warriors = 0;
             var min_number_expanders = 0;
             var min_number_long_distance_upgraders = 0;
@@ -121,9 +121,9 @@ module.exports = {
             var min_number_long_distance_builders = 0;
         }
 
-        if (curr_spawn.name == 'Spawn1' && Memory.attackBool === false) {
+        if (curr_spawn.name == 'Spawn1') {
             var min_number_cannon_fodder = 0;
-            var min_number_warriors1 = 1000;
+            var min_number_warriors1 = 0;
             var min_number_upgraders = 1;
             var min_number_harvesters = 0;
             var min_number_storer = 0;
@@ -267,6 +267,7 @@ module.exports = {
 
             }
             else if (current_number_of_upgraders < min_number_upgraders) {
+
                 var body_parts_list = require('createBalancedCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more upgraders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);

@@ -13,7 +13,7 @@ module.exports = {
         creep.say(first_letter_role + "GetE");
         var source = require('function_find_closest_source').run(creep);
 
-        if (source != undefined){
+        if (source.energy != 0){
             require('function_move_in_range_harvest').run(creep, source);
         }
         else if (creep.energy > 50){
