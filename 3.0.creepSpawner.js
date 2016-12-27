@@ -69,45 +69,11 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-        else if (current_spawn_level == 5) {
+        else  { // if (current_spawn_level == 5)
             var min_number_transferer = 1;
             var min_number_storer = 3;
             var min_number_repairers = 1;
             var min_number_harvesters = 0;
-            var min_number_long_distance_harvesters = 0;
-            var min_number_energizers = 0;
-            var min_number_towerers = 0;
-            var min_number_upgraders = 0;
-            var min_number_builders = 1;
-            var min_number_warriors = 0;
-            var min_number_expanders = 0;
-            var min_number_long_distance_upgraders = 0;
-            var min_number_wallers = 1;
-            var min_number_warriors1 = 0;
-            var min_number_long_distance_builders = 0;
-        }
-        else if (current_spawn_level == 6) {
-            var min_number_transferer = 1;
-            var min_number_storer = 3;
-            var min_number_repairers = 1;
-            var min_number_harvesters = 2;
-            var min_number_long_distance_harvesters = 0;
-            var min_number_energizers = 0;
-            var min_number_towerers = 0;
-            var min_number_upgraders = 1;
-            var min_number_builders = 1;
-            var min_number_warriors = 0;
-            var min_number_expanders = 0;
-            var min_number_long_distance_upgraders = 0;
-            var min_number_wallers = 1;
-            var min_number_warriors1 = 0;
-            var min_number_long_distance_builders = 0;
-        }
-        else {
-            var min_number_transferer = 1;
-            var min_number_storer = 3;
-            var min_number_repairers = 1;
-            var min_number_harvesters = 1;
             var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
@@ -121,15 +87,19 @@ module.exports = {
             var min_number_long_distance_builders = 0;
         }
 
-        if (curr_spawn.name == 'Spawn1') {
+        let  custom_design = false;
+
+        custom_design = false;
+        if (curr_spawn.name == 'Spawn1' && custom_design) {
             var min_number_cannon_fodder = 0;
             var min_number_warriors1 = 0;
             var min_number_upgraders = 1;
             var min_number_harvesters = 0;
-            var min_number_storer = 0;
+            var min_number_storer = 3;
             var min_number_transferer = 1;
         }
-        else if (curr_spawn.name == 'Spawn2') {
+        custom_design = true;
+        if (curr_spawn.name == 'Spawn2' && custom_design) {
             var min_number_repairers = 1;
             var min_number_harvesters = 1;
             var min_number_long_distance_harvesters = 0;
