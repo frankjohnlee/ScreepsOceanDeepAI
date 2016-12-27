@@ -9,8 +9,8 @@
 
 module.exports = {
         run: function(energy) {
-            if (energy > 1000){
-                energy = 1000
+            if (energy > 1500){
+                energy = 1500
             }
             // Apparently based on the resource math more than 6 work parts will be inefficient
             var numberofParts = Math.floor(energy/200);

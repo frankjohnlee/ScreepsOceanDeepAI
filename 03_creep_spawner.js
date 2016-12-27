@@ -71,14 +71,14 @@ module.exports = {
         }
         else if (current_spawn_level == 5) {
             var min_number_transferer = 1;
-            var min_number_storer = 3;
+            var min_number_storer = 4;
             var min_number_repairers = 1;
             var min_number_harvesters = 0;
             var min_number_long_distance_harvesters = 0;
             var min_number_energizers = 0;
             var min_number_towerers = 0;
             var min_number_upgraders = 1;
-            var min_number_builders = 2;
+            var min_number_builders = 0;
             var min_number_warriors = 0;
             var min_number_expanders = 0;
             var min_number_long_distance_upgraders = 0;
@@ -88,7 +88,7 @@ module.exports = {
         }
         else if (current_spawn_level == 6) {
             var min_number_transferer = 1;
-            var min_number_storer = 0;
+            var min_number_storer = 3;
             var min_number_repairers = 1;
             var min_number_harvesters = 2;
             var min_number_long_distance_harvesters = 0;
@@ -105,7 +105,7 @@ module.exports = {
         }
         else {
             var min_number_transferer = 1;
-            var min_number_storer = 0;
+            var min_number_storer = 3;
             var min_number_repairers = 1;
             var min_number_harvesters = 1;
             var min_number_long_distance_harvesters = 0;
@@ -120,16 +120,16 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-
-        if (curr_spawn.name == 'Spawn1' && Memory.attackBool === false){
-            var min_number_cannon_fodder =  0;
+        //
+        if (curr_spawn.name == 'Spawn1' && Memory.attackBool === false) {
+            var min_number_cannon_fodder = 0;
             var min_number_warriors1 = 1000;
             var min_number_upgraders = 1;
-            var min_number_harvesters = 1;
-            var min_number_storer = 2;
-            var min_number_transferer = 0;
+            var min_number_harvesters = 0;
+            var min_number_storer = 0;
+            var min_number_transferer = 1;
         }
-        else if (curr_spawn.name == 'Spawn2'){
+        else if (curr_spawn.name == 'Spawn2') {
             var min_number_repairers = 1;
             var min_number_harvesters = 1;
             var min_number_long_distance_harvesters = 0;
@@ -165,25 +165,15 @@ module.exports = {
 
         // Get energy used to generate creeps, past 1500 apparently is inefficient
         var energy = curr_spawn.room.energyCapacityAvailable;
-        //if (energy > 2000) {
-        //    energy = 2000
-        //}
+        if (energy > 1000) {
+            energy = 1000
+        }
         var avail_energy = curr_spawn.room.energyAvailable;
 
 
         var body_parts_list = require('createBalancedCreep').run(energy);
         var body_parts_list_MW1 = require('createBalancedMeleeWarrior').run(energy);
-        if (curr_spawn.name == 'Spawn2'){
-            var energy = curr_spawn.room.energyCapacityAvailable - 300;
-            var avail_energy = curr_spawn.room.energyAvailable;
-            curr_spawn.createCreep([WORK, CARRY, MOVE], undefined, {
-                role: 'Harvester',
-                working: false,
-                home_room: curr_spawn.room.name,
-                home_spawn: curr_spawn
-            });
 
-        }
 
         var current_number_of_work_creeps = current_number_of_harvesters;
         current_number_of_work_creeps += current_number_of_energizers;
@@ -250,19 +240,21 @@ module.exports = {
         console.log(spaces + spaces + spaces + spaces + spaces + ideal_count_text);
 
 
-        if (current_number_of_harvesters == 0) {
-            curr_spawn.createCreep([WORK, CARRY, MOVE], undefined, {
-                role: 'Harvester',
-                working: false,
-                home_room: curr_spawn.room.name,
-                home_spawn: curr_spawn
-            });
-        }
+
         var turn_off_spawning = false;
         if (turn_off_spawning == false) {
-
-
-            if (current_number_of_harvesters < min_number_harvesters) {
+            if (current_number_of_transferer < min_number_transferer) {
+                var transfererBodyParts = require('createBalancedTransferCreep').run(energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more Transferer. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + transfererBodyParts);
+                curr_spawn.createCreep(transfererBodyParts, undefined, {
+                    role: 'Transferer',
+                    working: false,
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn
+                });
+            }
+            else if (current_number_of_harvesters < min_number_harvesters) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more harvesters. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
                 var body_parts_list = require('createBalancedCreep').run(energy);
@@ -298,31 +290,6 @@ module.exports = {
                     home_spawn: curr_spawn
                 });
             }
-            else if (current_number_of_storer < min_number_storer) {
-                var body_parts_list = require('createBalancedCreep').run(energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more Storers. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                curr_spawn.createCreep(body_parts_list, undefined, {
-                    role: 'Storer',
-                    working: false,
-                    home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
-                });
-            }
-            else if (current_number_of_transferer < min_number_transferer)
-                var body_parts_list = require('createBalancedTransferCreep').run(energy);
-
-                    console.log(spaces + spaces + spaces + spaces + spaces + "Need more Transferer. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
-                    console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                    curr_spawn.createCreep(body_parts_list, undefined, {
-                        role: 'Transferer',
-                        working: false,
-                        home_room: curr_spawn.room.name,
-                        home_spawn: curr_spawn
-                    });
-
-
-            }
             else if (current_number_of_warriors1 < min_number_warriors1) {
                 var body_parts_list_MW1 = require('createBalancedMeleeWarrior').run(energy);
                 body_parts_list_MW1 = Memory.warrior1Parts;
@@ -336,8 +303,6 @@ module.exports = {
                     home_spawn: curr_spawn
                 });
             }
-
-
             else if (current_number_of_warriors < min_number_warriors) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more warrior2. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list_MW1);
@@ -356,7 +321,7 @@ module.exports = {
                 var body_parts_list = require('createBalancedCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Builders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                var rooms_array = ['W33S77','W32S77', 'W31S77'];
+                var rooms_array = ['W33S77', 'W32S77', 'W31S77'];
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'LongDistanceBuilder',
                     working: false,
@@ -367,8 +332,6 @@ module.exports = {
                 });
 
             }
-
-
             else if (current_number_of_long_distance_harvesters < min_number_long_distance_harvesters) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Harvester. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
@@ -380,9 +343,6 @@ module.exports = {
                     home_spawn: curr_spawn
                 });
             }
-
-
-
             else if (current_number_of_long_distance_upgraders < min_number_long_distance_upgraders) {
                 var body_parts_list = require('createBalancedCreep').run(energy);
 
@@ -474,7 +434,7 @@ module.exports = {
                 });
 
             }
-            else if (current_number_of_cannon_fodder < min_number_cannon_fodder){
+            else if (current_number_of_cannon_fodder < min_number_cannon_fodder) {
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more CannonFodder. Will create with energy: " + 50 + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + [MOVE]);
 
@@ -487,8 +447,7 @@ module.exports = {
                     home_spawn: curr_spawn
                 });
             }
-
-
         }
+
     }
 };

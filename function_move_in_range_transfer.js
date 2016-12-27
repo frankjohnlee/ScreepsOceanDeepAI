@@ -9,12 +9,8 @@
 
 module.exports = {
     run: function (creep, target) {
-        if (target == creep){
-            creep.say("give energy");
-        }
-        else{
-            creep.say("transfer energy")
-        }
+        var first_letter_role = creep.memory.role.slice(0,1);
+        creep.say(first_letter_role + ":Trans-E");
 
         if (creep.transfer(target, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) { // try to harvest from source
             creep.moveTo(target); // if it's not in range then move to range

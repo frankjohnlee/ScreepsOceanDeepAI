@@ -4,30 +4,32 @@ module.exports = {
 
         // CASE 1: WARRIORS ARE IN TARGET ROOM
         if (creep.room.name == creep.memory.target_room) {
+            creep.moveTo(21, 15);
 
-            let target = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
-                filter: o => o.structureType === STRUCTURE_TOWER
-            });
-            if(!target) {
-                target = creep.pos.findClosestByPath(FIND_HOSTILE_CREEPS);
-            }
-            if(!target) target = creep.pos.findClosestByPath(FIND_HOSTILE_SPAWNS);
-            if(!target) target = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES);
-            if(target){
-                var ret = creep.attack(target);
-                if(ret === ERR_NOT_IN_RANGE){
-                    ret = creep.moveTo(target);
-                    console.log(creep, "moves to", target);
-                }
-                console.log(creep, "returns", ret);
-            }
+            //let target = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES, {
+            //    filter: o => o.structureType === STRUCTURE_TOWER
+            //});
+            //if(!target) {
+            //    target = creep.pos.findClosestByPath(FIND_HOSTILE_CREEPS);
+            //}
+            //if(!target) target = creep.pos.findClosestByPath(FIND_HOSTILE_SPAWNS);
+            //if(!target) target = creep.pos.findClosestByPath(FIND_HOSTILE_STRUCTURES);
+            //if(target){
+            //    creep.moveTo(21, 15);
+            //    var ret = creep.attack(target);
+            //    if(ret === ERR_NOT_IN_RANGE){
+            //        ret = creep.moveTo(target);
+            //        console.log(creep, "moves to", target);
+            //    }
+            //    console.log(creep, "returns", ret);
+            //}
 
         }
 
         // CASE 2: WARRIORS ARE IN HOME ROOM
         else
             if (creep.memory.home_room == creep.room.name) {
-                const armySizeBeforeAttack = 79;
+                const armySizeBeforeAttack = 99;
                 const armySizeWhenAttacking = armySizeBeforeAttack + 1;
                 const currentNumberOfWarriors1 = _.sum(Game.creeps, (c) => c.memory.role == 'WarriorMelee1');
 
@@ -48,8 +50,8 @@ module.exports = {
                 else if (!Memory.attackBool) {
                     const locX = 17;
                     const locY = 4;
-                    //creep.moveTo(locX, locY);
-                    creep.say(currentNumberOfWarriors1 + " | " + armySizeWhenAttacking);
+                    creep.moveTo(locX, locY);
+                    //creep.say(currentNumberOfWarriors1 + " | " + armySizeWhenAttacking);
                 }
 
 

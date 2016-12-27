@@ -14,13 +14,17 @@ module.exports = {
         if (creep.memory.working == true) { // If creep is currently set to working
             var spawn_array = creep.room.find(FIND_MY_SPAWNS);
             var spawn = creep.pos.findClosestByPath(spawn_array);
-            if (spawn.energy == spawn.energyCapacity) {
-                require("role_energizer").run(creep);
+            if (spawn){
+                if (spawn.energy == spawn.energyCapacity) {
+                    require("role_energizer").run(creep);
+                }
+                else {
+                    creep.say("hWorking");
+                    require('function_move_in_range_transfer').run(creep, spawn);
+                }
+
             }
-            else {
-                creep.say("hWorking");
-                require('function_move_in_range_transfer').run(creep, spawn);
-            }
+
         }
     }
 };

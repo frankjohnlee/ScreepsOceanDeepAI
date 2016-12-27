@@ -19,16 +19,25 @@ module.exports = {
         require('01_tasker').run();
         require('02_spawn_controller').run();
 
-
         if (Memory.attackBool == undefined) {
             Memory.attackBool = false;
         }
+        Memory.attackBool = true;
+        //if (Memory.warrior1Parts == undefined) {
+        //    Memory.warrior1Parts = [ATTACK, MOVE];
+        //}
+        //
+        //if (Game.creeps.John.ticksToLive == 400){
+        //    Memory.attackBool = true;}
+        //else{
+        //    Memory.attackBool = false;
+        //}
+        //Memory.attackBool = true;
+        //
+        //
+        //Memory.warrior1Parts = [MOVE, ATTACK];
 
-        if (Memory.warrior1Parts == undefined) {
-            Memory.warrior1Parts = [ATTACK, MOVE];
-        }
-        Memory.attackBool = false;
-        Memory.warrior1Parts = [ATTACK, MOVE, MOVE];
+
 
 
 

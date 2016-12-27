@@ -9,8 +9,6 @@ module.exports = {
 
         if (creep.memory.working == true) { // If creep is currently set to working
             require('function_move_in_range_transfer').run(creep, storage);
-
-
         }
     }
 };
