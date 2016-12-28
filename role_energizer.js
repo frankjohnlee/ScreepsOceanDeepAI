@@ -30,7 +30,6 @@ module.exports = {
                 var structure = towers;
                 structure.concat(extensions);
                 structure.concat(containers);
-                structure.concat(storage);
             }
             else {
                 structure = structre_rec;
