@@ -222,6 +222,7 @@ module.exports = {
         const spawnTurnedOn = true;
         if (spawnTurnedOn) {
             if (current_number_of_upgraders < min_number_upgraders) {
+
                     var body_parts_list = require('createBalancedCreep').run(energy);
                     console.log(spaces + spaces + spaces + spaces + spaces + "Need more upgraders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                     console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
@@ -234,6 +235,7 @@ module.exports = {
 
 
                 }
+
             else if (current_number_of_transferer < min_number_transferer) {
                 var transfererBodyParts = require('createBalancedTransferCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Transferer. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
@@ -257,6 +259,7 @@ module.exports = {
                 });
 
             }
+
             else if (current_number_of_storer < min_number_storer) {
                 var body_parts_list = require('createBalancedCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Storers. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
