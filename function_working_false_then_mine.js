@@ -9,11 +9,10 @@
 
 module.exports = {
     run: function (creep) {
-
-        var use_reserve = true;
-        //console.log(use_reserve && creep.memory.role == 'Harvester' || creep.memory.role == 'Energizer');
-        //Memory.attackBool === false &&
-        if (creep.memory.role != 'Storer' && creep.memory.working == false && creep.room.storage != undefined){
+        if (creep.memory.role != 'Storer' &&
+            creep.memory.working == false &&
+            creep.room.storage != undefined &&
+            creep.memory.homeRoomLevel > 4){
             require('function_mine_storage').run(creep);
         }
         else if (creep.memory.working == false) {

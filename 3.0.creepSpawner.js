@@ -69,7 +69,7 @@ module.exports = {
             var min_number_warriors1 = 0;
             var min_number_long_distance_builders = 0;
         }
-        else  { // if (current_spawn_level == 5)
+        else { // if (current_spawn_level == 5)
             var min_number_transferer = 1;
             var min_number_storer = 3;
             var min_number_repairers = 1;
@@ -87,7 +87,7 @@ module.exports = {
             var min_number_long_distance_builders = 0;
         }
 
-        let  custom_design = false;
+        let custom_design = false;
 
         custom_design = false;
         if (curr_spawn.name == 'Spawn1' && custom_design) {
@@ -122,7 +122,7 @@ module.exports = {
         }
 
         const countCreepByRole = true;
-        if (countCreepByRole){
+        if (countCreepByRole) {
             var current_number_of_harvesters = _.sum(creep_list, (c) => c.memory.role == 'Harvester');
             var current_number_of_upgraders = _.sum(creep_list, (c) => c.memory.role == 'Upgrader');
             var current_number_of_builders = _.sum(creep_list, (c) => c.memory.role == 'Builder');
@@ -145,13 +145,13 @@ module.exports = {
             energy = 1000
         }
         var avail_energy = curr_spawn.room.energyAvailable;
-        if (curr_spawn.name == 'Spawn2'){
+        if (curr_spawn.name == 'Spawn2') {
             energy = energy - 200;
         }
 
 
         const consoleSpawnInfo = true;
-        if (consoleSpawnInfo){
+        if (consoleSpawnInfo) {
             var current_number_of_work_creeps = current_number_of_harvesters;
             current_number_of_work_creeps += current_number_of_energizers;
             current_number_of_work_creeps += current_number_of_towerers;
@@ -221,19 +221,43 @@ module.exports = {
 
         const spawnTurnedOn = true;
         if (spawnTurnedOn) {
-            if (current_number_of_upgraders < min_number_upgraders) {
-                    var body_parts_list = require('createBalancedCreep').run(energy);
-                    console.log(spaces + spaces + spaces + spaces + spaces + "Need more upgraders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
-                    console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                    curr_spawn.createCreep(body_parts_list, undefined, {
-                        role: 'Upgrader',
-                        working: false,
-                        home_room: curr_spawn.room.name,
-                        home_spawn: curr_spawn
-                    });
+            if (current_number_of_harvesters < min_number_harvesters) {
+                let energyForCreep = energy;
+
+                var body_parts_list = require('createBalancedCreep').run(energyForCreep);
 
 
+                while ((curr_spawn.canCreateCreep(body_parts_list, undefined) != OK) && (energyForCreep > 50)) {
+                    energyForCreep = energyForCreep - 50;
+                    body_parts_list = require('createBalancedCreep').run(energyForCreep);
                 }
+
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more harvesters. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
+
+                curr_spawn.createCreep(body_parts_list, undefined, {
+                    role: 'Harvester',
+                    working: false,
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
+                });
+
+            }
+            else if (current_number_of_upgraders < min_number_upgraders) {
+                var body_parts_list = require('createBalancedCreep').run(energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more upgraders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
+                curr_spawn.createCreep(body_parts_list, undefined, {
+                    role: 'Upgrader',
+                    working: false,
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
+                });
+
+
+            }
             else if (current_number_of_transferer < min_number_transferer) {
                 var transfererBodyParts = require('createBalancedTransferCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Transferer. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
@@ -242,20 +266,9 @@ module.exports = {
                     role: 'Transferer',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
-            }
-            else if (current_number_of_harvesters < min_number_harvesters){
-                var body_parts_list = require('createBalancedCreep').run(energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more harvesters. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                curr_spawn.createCreep(body_parts_list, undefined, {
-                    role: 'Harvester',
-                    working: false,
-                    home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
-                });
-
             }
             else if (current_number_of_storer < min_number_storer) {
                 var body_parts_list = require('createBalancedCreep').run(energy);
@@ -265,7 +278,8 @@ module.exports = {
                     role: 'Storer',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
             }
             else if (current_number_of_warriors1 < min_number_warriors1) {
@@ -278,7 +292,8 @@ module.exports = {
                     working: false,
                     target_room: 'W31S76',
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
             }
             else if (current_number_of_warriors < min_number_warriors) {
@@ -291,7 +306,8 @@ module.exports = {
                     working: false,
                     target_room: 'W32S77',
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
             }
@@ -306,7 +322,8 @@ module.exports = {
                     home_room: curr_spawn.room.name,
                     target_rooms: rooms_array,
                     target_room: false,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
             }
@@ -318,7 +335,8 @@ module.exports = {
                     working: false,
                     target_room: 'W21S79',
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
             }
             else if (current_number_of_long_distance_upgraders < min_number_long_distance_upgraders) {
@@ -331,7 +349,8 @@ module.exports = {
                     working: false,
                     target_room: Game.rooms['W32S77'],
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
             }
@@ -343,7 +362,8 @@ module.exports = {
                     role: 'Energizer',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
 
                 });
 
@@ -356,7 +376,8 @@ module.exports = {
                     role: 'Towerer',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
             }
@@ -368,7 +389,8 @@ module.exports = {
                     role: 'Repairer',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
             }
@@ -380,7 +402,8 @@ module.exports = {
                     role: 'Builder',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
 
@@ -393,7 +416,8 @@ module.exports = {
                     role: 'Waller',
                     working: false,
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
             }
             else if (current_number_of_expanders < min_number_expanders) {
@@ -408,7 +432,8 @@ module.exports = {
                     working: false,
                     target_room: 'W78N73',
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
 
             }
@@ -422,7 +447,8 @@ module.exports = {
                     working: false,
                     target_room: 'W31S76',
                     home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
                 });
             }
         }

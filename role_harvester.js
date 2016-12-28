@@ -15,12 +15,12 @@ module.exports = {
             var spawn_array = creep.room.find(FIND_MY_SPAWNS);
             var spawn = creep.pos.findClosestByPath(spawn_array);
             if (spawn){
-                if (spawn.energy == spawn.energyCapacity) {
-                    require("role_energizer").run(creep);
+                if (spawn.energy != spawn.energyCapacity) {
+                    require('function_move_in_range_transfer').run(creep, spawn);
                 }
                 else {
                     creep.say("hWorking");
-                    require('function_move_in_range_transfer').run(creep, spawn);
+
                 }
 
             }
