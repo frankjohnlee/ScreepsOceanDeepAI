@@ -16,32 +16,10 @@ module.exports = {
         console.log(spaces + "Game Time: " + hours  + " hrs" + "  ||  day: " + days );
 
         require('garbage_cleanup').run();
+
         require('1.0.tasker').run();
         require('2.0.spawnController').run();
-
-        if (Memory.attackBool == undefined) {
-            Memory.attackBool = false;
-        }
-        Memory.attackBool = true;
-        //if (Memory.warrior1Parts == undefined) {
-        //    Memory.warrior1Parts = [ATTACK, MOVE];
-        //}
-        //
-        //if (Game.creeps.John.ticksToLive == 400){
-        //    Memory.attackBool = true;}
-        //else{
-        //    Memory.attackBool = false;
-        //}
-        //Memory.attackBool = true;
-        //
-        //
-        //Memory.warrior1Parts = [MOVE, ATTACK];
-
-
-
-
-
-
+        require('0.1.globalMemory').run();
 
 
 

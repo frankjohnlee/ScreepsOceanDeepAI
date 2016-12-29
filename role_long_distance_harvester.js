@@ -4,9 +4,6 @@ module.exports = {
         var debug_module = false;
         require('function_working_status').run(creep); // When creep is carrying max energy working becomes false.
 
-        if (creep.memory.home_room == 'W33S77'){
-            creep.memory.target_room = 'W34S77'
-        }
         var home_room = creep.memory.home_room;
         var creep_current_room = creep.room.name;
         var in_target_room = creep_current_room == creep.memory.target_room;
@@ -24,18 +21,19 @@ module.exports = {
         else if (in_target_room && creep.memory.working == false) {
             creep.say("LDHGetEnergy");
             require('function_working_false_then_mine').run(creep);
-            creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
+
         }
 
         // CASE 3: CREEP IS FULL OF ENERGY => GO HOME
         else if (in_target_room && creep.memory.working == true) {
             require('function_go_to_home_room').run(creep);
-            creep.room.createConstructionSite(creep.pos, STRUCTURE_ROAD);
-            }
+        }
+
+
 
         // CASE 4: CREEP IS HOME AND FULL OF ENERGY => BECOME HARVESTER
         else if (in_home_room && creep.memory.working == true) {
-            require("role_harvester").run(creep);
+            require("role_storer").run(creep);
         }
 
         if (debug_module) {

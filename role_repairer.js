@@ -10,8 +10,9 @@ module.exports = {
             (object.structureType != STRUCTURE_WALL &&
             object.structureType != STRUCTURE_RAMPART)
             });
-            var closest_repair = creep.pos.findClosestByPath(repairSite);
             creep.say("rWorking");
+            var closest_repair = creep.pos.findClosestByPath(repairSite);
+
             if (closest_repair != undefined) {
                 if (creep.repair(closest_repair) == ERR_NOT_IN_RANGE) { // try to transfer
                     creep.say("rGoRepair");

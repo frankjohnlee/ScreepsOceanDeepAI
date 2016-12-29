@@ -14,7 +14,7 @@ module.exports = {
         var storageHasEnough = false;
 
         if (creep.room.storage != undefined){
-            storageHasEnough = creep.room.storage.store[RESOURCE_ENERGY] > 10000
+            storageHasEnough = creep.room.storage.store[RESOURCE_ENERGY] > 1000
         }
         const isNotStorer = creep.memory.role != 'Storer';
         const isNotWorking = creep.memory.working == false;

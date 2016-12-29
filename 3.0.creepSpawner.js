@@ -1,5 +1,7 @@
 module.exports = {
     run: function (curr_spawn, creep_list, current_spawn_level) {
+        const curr_room = curr_spawn.room;
+        const spaces = "    ";
         
         // All Creep Types
         let min_number_transferer = 0;
@@ -120,8 +122,8 @@ module.exports = {
         custom_design = true;
         if (curr_spawn.name == 'Spawn2' && custom_design) {
              min_number_repairers = 1;
-             min_number_harvesters = 2;
-             min_number_long_distance_harvesters = 2;
+             min_number_harvesters = 0;
+             min_number_long_distance_harvesters = 4;
              min_number_energizers = 0;
              min_number_towerers = 0;
              min_number_upgraders = 1;
@@ -129,9 +131,11 @@ module.exports = {
              min_number_warriors = 0;
              min_number_expanders = 0;
              min_number_long_distance_upgraders = 0;
-             min_number_wallers = 0;
+             min_number_wallers = 1;
              min_number_warriors1 = 0;
              min_number_long_distance_builders = 0;
+             min_number_storer = 2;
+             min_number_transferer = 1;
         }
 
         const countCreepByRole = true;
@@ -162,19 +166,10 @@ module.exports = {
 
 
         const consoleSpawnInfo = true;
+
+
+
         if (consoleSpawnInfo) {
-            var current_number_of_work_creeps = current_number_of_harvesters;
-            current_number_of_work_creeps += current_number_of_energizers;
-            current_number_of_work_creeps += current_number_of_towerers;
-            current_number_of_work_creeps += current_number_of_builders;
-            current_number_of_work_creeps += current_number_of_repairers;
-            current_number_of_work_creeps += current_number_of_upgraders;
-            current_number_of_work_creeps += current_number_of_warriors;
-            current_number_of_work_creeps += current_number_of_long_distance_harvesters;
-            current_number_of_work_creeps += current_number_of_long_distance_upgraders;
-
-
-            // OUTPUT TXT TO GET STATUS REPORT
             var creep_count_txt = 'Current Count => ';
             creep_count_txt += 'Harvesters: ' + current_number_of_harvesters + " || ";
             creep_count_txt += 'Energizers: ' + current_number_of_energizers + " || ";
@@ -188,10 +183,8 @@ module.exports = {
             creep_count_txt += 'Wallers: ' + current_number_of_wallers + " || ";
             creep_count_txt += 'Warriors1: ' + current_number_of_warriors1 + " || ";
             creep_count_txt += 'Expander: ' + current_number_of_expanders + " || ";
-            creep_count_txt += 'Cannon Fodder: ' + current_number_of_cannon_fodder + " || ";
             creep_count_txt += 'Storer: ' + current_number_of_storer + " || ";
-            creep_count_txt += 'Transferer: ' + current_number_of_transferer + " || ";
-            creep_count_txt += 'smallTransferer: ' + current_number_of_smalltransferer + " || ";
+            creep_count_txt += 'transferer: ' + current_number_of_transferer + " || ";
 
             var ideal_count_text = 'Ideal Count   => ';
             ideal_count_text += 'Harvesters: ' + min_number_harvesters + " || ";
@@ -206,15 +199,13 @@ module.exports = {
             ideal_count_text += 'Wallers: ' + min_number_wallers + " || ";
             ideal_count_text += 'Warriors1: ' + min_number_warriors1 + " || ";
             ideal_count_text += 'Expander: ' + min_number_expanders + " || ";
-            ideal_count_text += 'Cannon Fodder: ' + min_number_cannon_fodder + " || ";
             ideal_count_text += 'Storer: ' + min_number_storer + " || ";
-            ideal_count_text += 'Transferer: ' + min_number_transferer + " || ";
-            ideal_count_text += 'smallTransferer: ' + min_number_small_transferer + " || ";
+            ideal_count_text += 'transferer: ' + min_number_expanders + " || ";
 
 
             // OUTPUT MESSAGE HERE
             var total_creep_in_room = _.sum(creep_list, (c) => c != undefined);
-            var spaces = "    ";
+            const spaces = "    ";
             console.log(spaces + spaces + spaces + "03_creep_spawner.js");
             console.log(spaces + spaces + spaces + spaces + "Current Spawn: " + curr_spawn +
             " || Energy Capacity: " + curr_spawn.room.energyCapacityAvailable +
@@ -229,7 +220,7 @@ module.exports = {
             console.log(spaces + spaces + spaces + spaces + spaces + 'Storage Energy: ' + curr_spawn.room.storage.store[RESOURCE_ENERGY]);
             //require('function_print_structure_count').run(curr_spawn, (spaces + spaces + spaces + spaces + spaces));
             console.log(spaces + spaces + spaces + spaces + spaces + "Total creep in room: " + total_creep_in_room);
-            console.log(spaces + spaces + spaces + spaces + spaces + creep_count_txt);
+            console.log(spaces + spaces + spaces + spaces + spaces +  creep_count_txt);
             console.log(spaces + spaces + spaces + spaces + spaces + ideal_count_text);
         }
 
@@ -364,6 +355,23 @@ module.exports = {
                 });
 
             }
+            else if (current_number_of_builders < min_number_builders) {
+                if (energy > 700){
+                    energy = 700
+                }
+                let body_parts_list = require('createBalancedCreep').run(energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more builders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
+                curr_spawn.createCreep(body_parts_list, undefined, {
+                    role: 'Builder',
+                    working: false,
+                    home_room: curr_spawn.room.name,
+                    home_spawn: curr_spawn,
+                    homeRoomLevel: current_spawn_level
+                });
+
+
+            }
             else if (current_number_of_long_distance_builders < min_number_long_distance_builders) {
                 let body_parts_list = require('createBalancedCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Builders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
@@ -383,17 +391,20 @@ module.exports = {
             else if (current_number_of_long_distance_harvesters < min_number_long_distance_harvesters) {
                 let energyForCreep = energy;
                 let body_parts_list = require('createBalancedCreep').run(energyForCreep);
+                var targetRoom = require('3.3.determineTargetRoom').run(curr_room, creep_list);
 
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Harvester. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
+                console.log(spaces + spaces + spaces + spaces + spaces + "Need more Long Distance Harvester, target: " + targetRoom + ". Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
                 curr_spawn.createCreep(body_parts_list, undefined, {
                     role: 'LongDistanceHarvester',
                     working: false,
-                    target_room: 'W21S79',
+                    target_room: targetRoom,
                     home_room: curr_spawn.room.name,
                     home_spawn: curr_spawn,
                     homeRoomLevel: current_spawn_level
                 });
+
+
             }
             else if (current_number_of_long_distance_upgraders < min_number_long_distance_upgraders) {
                 let body_parts_list = require('createBalancedCreep').run(energy);
@@ -438,7 +449,10 @@ module.exports = {
 
             }
             else if (current_number_of_repairers < min_number_repairers) {
-                let body_parts_list = require('createBalancedCreep').run(energy-400);
+                if (energy > 700){
+                    energy = 700
+                }
+                let body_parts_list = require('createBalancedCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more repairers. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
                 curr_spawn.createCreep(body_parts_list, undefined, {
@@ -450,22 +464,12 @@ module.exports = {
                 });
 
             }
-            else if (current_number_of_builders < min_number_builders) {
-                let body_parts_list = require('createBalancedCreep').run(energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Need more builders. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
-                console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
-                curr_spawn.createCreep(body_parts_list, undefined, {
-                    role: 'Builder',
-                    working: false,
-                    home_room: curr_spawn.room.name,
-                    home_spawn: curr_spawn,
-                    homeRoomLevel: current_spawn_level
-                });
-
-
-            }
             else if (current_number_of_wallers < min_number_wallers) {
-                let body_parts_list = require('createBalancedCreep').run(energy-400);
+                if (energy > 700){
+                    energy = 700
+                }
+
+                let body_parts_list = require('createBalancedCreep').run(energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Need more wallers. Will create with energy: " + energy + ", Current Available energy: " + avail_energy);
                 console.log(spaces + spaces + spaces + spaces + spaces + "Creep will contain body parts: " + body_parts_list);
                 curr_spawn.createCreep(body_parts_list, undefined, {
