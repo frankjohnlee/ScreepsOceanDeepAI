@@ -89,22 +89,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="role_waller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="role_waller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/role_waller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="902">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="176">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="03_creep_spawner.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/7zO042C9879/03_creep_spawner.js">
+      <file leaf-file-name="0.0.main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/0.0.main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2576" max-vertical-offset="7656">
-              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="146" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.44544432" vertical-offset="0" max-vertical-offset="1254">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0.1.globalMemory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/0.1.globalMemory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1870">
+              <caret line="105" column="75" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="75" />
+              <folding>
+                <element signature="e#132#775#0" expanded="false" />
+                <element signature="e#171#478#0" expanded="false" />
+                <element signature="e#1154#1232#0" expanded="false" />
+                <element signature="e#1307#1385#0" expanded="false" />
+                <element signature="e#1399#1530#0" expanded="false" />
+                <element signature="e#1657#1761#0" expanded="false" />
+                <element signature="e#1835#1939#0" expanded="false" />
+                <element signature="e#2065#2157#0" expanded="false" />
+                <element signature="e#2233#2558#0" expanded="false" />
+                <element signature="e#2651#2745#0" expanded="false" />
+                <element signature="e#2869#2960#0" expanded="false" />
+                <element signature="e#3052#3145#0" expanded="false" />
+                <element signature="e#3291#3390#0" expanded="false" />
+                <element signature="e#3464#3923#0" expanded="false" />
+                <element signature="e#4054#4156#0" expanded="false" />
+                <element signature="e#4325#4527#0" expanded="false" />
+                <element signature="e#4680#4782#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,16 +142,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
               <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function_working_status.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/function_working_status.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="176">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -216,8 +234,6 @@
         <option value="$PROJECT_DIR$/role_energizer.js" />
         <option value="$PROJECT_DIR$/role.DyingCreep.js" />
         <option value="$PROJECT_DIR$/2.0.spawnController.js" />
-        <option value="$PROJECT_DIR$/0.0.main.js" />
-        <option value="$PROJECT_DIR$/0.1.globalMemory.js" />
         <option value="$PROJECT_DIR$/role_storer.js" />
         <option value="$PROJECT_DIR$/3.3.determineTargetRoom.js" />
         <option value="$PROJECT_DIR$/role_repairer.js" />
@@ -225,6 +241,8 @@
         <option value="$PROJECT_DIR$/role_long_distance_harvester.js" />
         <option value="$PROJECT_DIR$/2.1.roomMemory.js" />
         <option value="$PROJECT_DIR$/3.0.creepSpawner.js" />
+        <option value="$PROJECT_DIR$/0.1.globalMemory.js" />
+        <option value="$PROJECT_DIR$/0.0.main.js" />
       </list>
     </option>
   </component>
@@ -366,7 +384,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="1" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -374,7 +392,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -415,7 +433,7 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -701,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/0.0.main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1210">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.0.tasker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1012">
@@ -717,14 +727,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#280#1145#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/0.1.globalMemory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,6 +910,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="902">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0.1.globalMemory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="482" max-vertical-offset="1870">
+          <caret line="105" column="75" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="75" />
+          <folding>
+            <element signature="e#132#775#0" expanded="false" />
+            <element signature="e#171#478#0" expanded="false" />
+            <element signature="e#1154#1232#0" expanded="false" />
+            <element signature="e#1307#1385#0" expanded="false" />
+            <element signature="e#1399#1530#0" expanded="false" />
+            <element signature="e#1657#1761#0" expanded="false" />
+            <element signature="e#1835#1939#0" expanded="false" />
+            <element signature="e#2065#2157#0" expanded="false" />
+            <element signature="e#2233#2558#0" expanded="false" />
+            <element signature="e#2651#2745#0" expanded="false" />
+            <element signature="e#2869#2960#0" expanded="false" />
+            <element signature="e#3052#3145#0" expanded="false" />
+            <element signature="e#3291#3390#0" expanded="false" />
+            <element signature="e#3464#3923#0" expanded="false" />
+            <element signature="e#4054#4156#0" expanded="false" />
+            <element signature="e#4325#4527#0" expanded="false" />
+            <element signature="e#4680#4782#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0.0.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44544432" vertical-offset="0" max-vertical-offset="1254">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

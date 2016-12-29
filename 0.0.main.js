@@ -9,7 +9,9 @@ module.exports = {
         console.log(spaces +
             "Global Control Progress: " + Game.gcl.progress +
             "  ||  Total Needed: " + Math.round(Game.gcl.progressTotal) +
-            "  ||  Percentage: " + Math.round(Game.gcl.progress/Game.gcl.progressTotal * 100) + "%"
+            "  ||  Percentage: " + Math.round(Game.gcl.progress/Game.gcl.progressTotal * 100) + "%" +
+            "  || Estimated Hours Left: " + Memory['timeEstimation']['globalControl']['hoursTillNextLevel'] +
+            "  || Estimated Days Left: " + Math.round(Memory['timeEstimation']['globalControl']['hoursTillNextLevel']/24)
         );
         var hours = Math.round(Game.time/60/60/60);
         var days = Math.round(hours/24);
