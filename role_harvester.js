@@ -20,6 +20,7 @@ module.exports = {
                 }
                 else {
                     creep.say("hWorking");
+                    require('role_energizer').run(creep)
 
                 }
 

@@ -60,7 +60,7 @@ module.exports = {
         else if (creep_role == 'CannonFodder') {
             require('role_cannon_fodder').run(creep);
         }
-        else if (creep_role == 'Transferer') {
+        else if (creep_role == 'Transferer' || 'smallTransferer') {
             require('role_transferer').run(creep);
         }
     }

@@ -16,16 +16,21 @@ module.exports = {
         console.log(spaces + spaces + "Total Number of Creeps: " + count_all_creeps);
         var build_roads = spaces + spaces + "Creating Roads b/c con_site_length < 10: false";
 
-        for (let name in all_creeps) { // for names in my list of str for   creeps ['creep1, creep2, ...]
 
+
+
+        for (let name in all_creeps) { // for names in my list of str for   creeps ['creep1, creep2, ...]
             var creep = Game.creeps[name]; // access the actual object of my creep with str key
 
-                var no_harvesters = false;
-                //no_harvesters = require('1.1.checkHarvester').run(creep);
+            const creepIsDying = require('1.3.creepIsDying').run(creep);
 
-                // if not ran then every creep will perform whatever role they have in their memory
-                if (no_harvesters == false){
-                    require('1.2.normalRun').run(creep);
+
+
+            if (creepIsDying){
+                require('role.DyingCreep').run(creep)
+            }
+            else {
+                require('1.2.normalRun').run(creep);
                 }
 
             }

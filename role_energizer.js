@@ -29,7 +29,6 @@ module.exports = {
                 require('function_math_shuffle').run(extensions);
                 var structure = towers;
                 structure.concat(extensions);
-                structure.concat(containers);
             }
             else {
                 structure = structre_rec;
@@ -43,10 +42,15 @@ module.exports = {
             while (structure[0].energy == structure[0].energyCapacity && structure.length > 1){
                 structure.shift();
             }
-            creep.say("eLen:" + structure.length);
-            if (structure[0].energy == structure[0].energyCapacity){
+            const isTransferer = creep.memory.role == 'Transferer';
+            const lastStructureFull = structure[0].energy == structure[0].energyCapacity;
+
+            if (isTransferer && lastStructureFull){
+                require('function_give_energy').run(creep);
+            }
+            else if (lastStructureFull){
                 require('role_storer').run(creep);
-            } // delete the first of list if afterwards len is 0 then run builder
+            }
             else {
                 require('function_move_in_range_transfer').run(creep, structure[0]);
             }
