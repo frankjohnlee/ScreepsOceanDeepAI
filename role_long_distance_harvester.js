@@ -26,7 +26,34 @@ module.exports = {
 
         // CASE 3: CREEP IS FULL OF ENERGY => GO HOME
         else if (in_target_room && creep.memory.working == true) {
-            require('function_go_to_home_room').run(creep);
+
+
+            var target_array = creep.room.find(FIND_CONSTRUCTION_SITES);
+            var con_target = creep.pos.findClosestByPath(target_array);
+            var repairSite = creep.room.find(FIND_STRUCTURES, {filter: object => object.hits < object.hitsMax &&
+            (object.structureType != STRUCTURE_WALL &&
+            object.structureType != STRUCTURE_RAMPART)
+            });
+            var closest_repair = creep.pos.findClosestByPath(repairSite);
+
+            if (con_target != undefined) {
+                if (creep.build(con_target) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(con_target);
+                    creep.say("LDH-GoConSite");
+                }
+            }
+            else if (closest_repair != undefined) {
+                if (creep.repair(closest_repair) == ERR_NOT_IN_RANGE) { // try to transfer
+                    creep.say("rGoRepair");
+                    creep.moveTo(closest_repair);
+                }
+            }
+            else {
+                require('function_go_to_home_room').run(creep);
+            }
+
+
+
         }
 
 

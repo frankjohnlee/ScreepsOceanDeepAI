@@ -21,7 +21,7 @@ module.exports = {
             Memory['timeEstimation'] = {};
         }
 
-        if (Memory['timeEstimation']['globalControl'] == undefined){
+        else if (Memory['timeEstimation']['globalControl'] == undefined){
             Memory['timeEstimation']['globalControl'] = {}
         }
 
@@ -30,7 +30,7 @@ module.exports = {
         if (Memory['timeEstimation']['globalControl']['count'] == undefined){
             Memory['timeEstimation']['globalControl']['count'] = 0
         }
-        else if (Memory['timeEstimation']['globalControl']['count'] > 149){
+        else if (Memory['timeEstimation']['globalControl']['count'] > 60){
             Memory['timeEstimation']['globalControl']['count'] = 0
         }
         else {
@@ -50,7 +50,7 @@ module.exports = {
         if (Memory['timeEstimation']['globalControl']['increaseIn60Ticks'] == undefined){
             Memory['timeEstimation']['globalControl']['increaseIn60Ticks'] = [];
         }
-        else if (Memory['timeEstimation']['globalControl']['count'] == 149){
+        else if (Memory['timeEstimation']['globalControl']['count'] == 60){
             var changeIn60Ticks = Game.gcl.progress - Memory['timeEstimation']['globalControl']['gclInitialValue'];
             Memory['timeEstimation']['globalControl']['increaseIn60Ticks'].push(changeIn60Ticks);
             Memory['timeEstimation']['globalControl']['avgChangePerTick'].push(changeIn60Ticks/60);

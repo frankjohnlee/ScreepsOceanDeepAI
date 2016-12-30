@@ -11,7 +11,7 @@ module.exports = {
     run: function (creep) {
         var first_letter_role = creep.memory.role.slice(0,1);
         creep.say(first_letter_role + "GoHome");
-        if (creep.roomName != creep.memory.home_room){
+        if (creep.room.name != creep.memory.home_room){
             require('function_go_to_room').run(creep, creep.memory.home_room);
         }
     }

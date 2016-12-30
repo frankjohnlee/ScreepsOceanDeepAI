@@ -12,6 +12,7 @@ module.exports = {
 
 
         var debug_module = false;
+        require('function_always_go_home').run(creep);
         require('function_working_status').run(creep);
         require('function_working_false_then_mine').run(creep);
 

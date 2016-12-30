@@ -217,7 +217,9 @@ module.exports = {
                 "  ||  Total Needed: " + curr_spawn.room.controller.progressTotal +
                 "  ||  Percentage: " + Math.round(curr_spawn.room.controller.progress / curr_spawn.room.controller.progressTotal * 100) + "%"
             );
-            console.log(spaces + spaces + spaces + spaces + spaces + 'Storage Energy: ' + curr_spawn.room.storage.store[RESOURCE_ENERGY]);
+            console.log(spaces + spaces + spaces + spaces + spaces + 'Storage Energy: ' + curr_spawn.room.storage.store[RESOURCE_ENERGY]) +
+                        ' || Percentage Filled: ' +
+                        Math.round(curr_spawn.room.storage.store[RESOURCE_ENERGY]/ curr_spawn.room.storage.storeCapacity* 100) + '%'
             //require('function_print_structure_count').run(curr_spawn, (spaces + spaces + spaces + spaces + spaces));
             console.log(spaces + spaces + spaces + spaces + spaces + "Total creep in room: " + total_creep_in_room);
             console.log(spaces + spaces + spaces + spaces + spaces +  creep_count_txt);

@@ -6,19 +6,7 @@ module.exports = {
         require('function_working_false_then_mine').run(creep);
 
         if (creep.memory.working == true) { // If creep is currently set to working
-            var repairSite = creep.room.find(FIND_STRUCTURES, {filter: object => object.hits < object.hitsMax &&
-            (object.structureType != STRUCTURE_WALL &&
-            object.structureType != STRUCTURE_RAMPART)
-            });
             creep.say("rWorking");
-            var closest_repair = creep.pos.findClosestByPath(repairSite);
-
-            if (closest_repair != undefined) {
-                if (creep.repair(closest_repair) == ERR_NOT_IN_RANGE) { // try to transfer
-                    creep.say("rGoRepair");
-                    creep.moveTo(closest_repair);
-                }
-            }
             else {
 
                 creep.say("rNoJobs");

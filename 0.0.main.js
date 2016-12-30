@@ -1,6 +1,9 @@
 module.exports = {
 
     run: function(){
+
+        require('0.1.globalMemory').run();
+
         console.log("===================================================================================== START =================================================================");
         var spaces = "    ";
         console.log("0_main.js");
@@ -18,10 +21,9 @@ module.exports = {
         console.log(spaces + "Game Time: " + hours  + " hrs" + "  ||  day: " + days );
 
         require('garbage_cleanup').run();
-
         require('1.0.tasker').run();
         require('2.0.spawnController').run();
-        require('0.1.globalMemory').run();
+
 
 
 
